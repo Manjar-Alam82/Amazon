@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Clone Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">Amazon</div>
+
+  <ul class="nav-links">
+      <li onclick="showCategory('all-product')">All-Product</li>
+      <li onclick="showCategory('men')">Men</li>
+      <li onclick="showCategory('women')">Women</li>
+      <li onclick="showCategory('kids')">Kids</li>
+      <li onclick="showCategory('electronics')">Electronics</li>
+  </ul>
+
+  <div class="searchBox">
+    <input type="text" id="search" placeholder="Search..." onkeyup="searchProducts()">
+    <button>🔍</button>
+  </div>
+
+  <button class="signinBtn" onclick="openLogin()">Sign In</button>
+
+  <div class="cart" onclick="openCart()">🛒 <span id="cartCount">0</span></div>
+</nav>
+
+
+<section id="products" class="products"></section>
+
+
+<!-- PRODUCT POPUP -->
+<div id="productPopup" class="productPopup">
+  <div class="popupContent">
+    <span class="closePopup" onclick="closeProduct()">✖</span>
+    <img id="popupImg">
+    <h3 id="popupTitle"></h3>
+    <p id="popupPrice"></p>
+    <button onclick="addToCartPopup()">Add to Cart</button>
+  </div>
+</div>
+
+
+<!-- LOGIN POPUP -->
+<div id="loginPopup" class="loginPopup">
+  <div class="loginBox">
+    <span class="closeLogin" onclick="closeLogin()">✖</span>
+    <h2>Sign In</h2>
+    <input type="text" placeholder="Email or Phone">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+    <p>New user? <a href="#">Register</a></p>
+  </div>
+</div>
+
+
+<!-- CART -->
+<div id="cartModal" class="cartModal">
+  <div class="cartContent">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <button onclick="closeCart()">Close</button>
+  </div>
+</div>
+
+
+<footer>
+  <div class="row">
+      <div><h3>About</h3><p>Company</p><p>Careers</p></div>
+      <div><h3>Connect</h3><p>Instagram</p><p>Twitter</p></div>
+      <div><h3>Help</h3><p>Payments</p><p>Returns</p></div>
+      <div><h3>Earn</h3><p>Sell Products</p><p>Affiliate</p></div>
+  </div>
+  <p class="copy">© 2026 Amazon Clone by Manjar</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
