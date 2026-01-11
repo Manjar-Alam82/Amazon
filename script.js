@@ -4,7 +4,34 @@
 const data = {
     men: [
 
-          { title: "Men Shirt", price: 899, img: "https://tse4.mm.bing.net/th?q=men+shirt" },
+        { title: "Men Formal Shirt", price: 999, img: "https://tse1.mm.bing.net/th?q=men+formal+shirt" },
+        { title: "Men Striped Shirt", price: 899, img: "https://tse2.mm.bing.net/th?q=striped+shirt+men" },
+        { title: "Men Checked Shirt", price: 849, img: "https://tse1.mm.bing.net/th?q=checked+shirt+men" },
+        { title: "Men Denim Shirt", price: 1099, img: "https://tse3.mm.bing.net/th?q=denim+shirt+men" },
+        { title: "Men Casual Shirt", price: 799, img: "https://tse4.mm.bing.net/th?q=casual+shirt+men" },
+        { title: "Men Cotton Shirt", price: 749, img: "https://tse3.mm.bing.net/th?q=cotton+shirt+men" },
+        { title: "Men Slim Fit Shirt", price: 1199, img: "https://tse2.mm.bing.net/th?q=slim+fit+shirt+men" },
+        { title: "Men Office Shirt", price: 1299, img: "https://tse3.mm.bing.net/th?q=office+shirt+men" },
+        { title: "Men Printed Shirt", price: 999, img: "https://tse2.mm.bing.net/th?q=printed+shirt+men" },
+        { title: "Men Linen Shirt", price: 1599, img: "https://tse1.mm.bing.net/th?q=linen+shirt+men" },
+        { title: "Men Oversized T-Shirt", price: 699, img: "https://tse3.mm.bing.net/th?q=oversized+tshirt+men" },
+        { title: "Men Polo T-Shirt", price: 749, img: "https://tse1.mm.bing.net/th?q=polo+tshirt+men" },
+        { title: "Men Graphic T-Shirt", price: 599, img: "https://tse3.mm.bing.net/th?q=graphic+tshirt+men" },
+        { title: "Men Sports T-Shirt", price: 799, img: "https://tse3.mm.bing.net/th?q=men+sports+tshirt" },
+        { title: "Men Sweatshirt", price: 1399, img: "https://tse2.mm.bing.net/th?q=men+sweatshirt" },
+        { title: "Men Hoodie Pullover", price: 1499, img: "https://tse2.mm.bing.net/th?q=pullover+hoodie+men" },
+        { title: "Men Winter Jacket", price: 2499, img: "https://tse1.mm.bing.net/th?q=winter+jacket+men" },
+        { title: "Men Bomber Jacket", price: 2999, img: "https://tse1.mm.bing.net/th?q=bomber+jacket+men" },
+        { title: "Men Leather Jacket", price: 4999, img: "https://tse3.mm.bing.net/th?q=leather+jacket+men" },
+        { title: "Men Track Suit", price: 1499, img: "https://tse3.mm.bing.net/th?q=track+suit+men" },
+        { title: "Men Kurta Set", price: 1699, img: "https://tse4.mm.bing.net/th?q=kurta+set+men" },
+        { title: "Men Ethnic Suit", price: 3299, img: "https://tse4.mm.bing.net/th?q=ethnic+set+men" },
+        { title: "Men Jeans Slim Fit", price: 1299, img: "https://tse3.mm.bing.net/th?q=slim+fit+jeans+men" },
+        { title: "Men Stretch Jeans", price: 1499, img: "https://tse3.mm.bing.net/th?q=stretch+jeans+men" },
+        { title: "Men Sneakers", price: 1899, img: "https://tse1.mm.bing.net/th?q=men+sneakers" },
+
+
+        { title: "Men Shirt", price: 899, img: "https://tse4.mm.bing.net/th?q=men+shirt" },
         { title: "Men Shirt", price: 999, img: "https://tse1.mm.bing.net/th?q=formal+men+shirt" },
         { title: "Men Shirt", price: 849, img: "https://tse1.mm.bing.net/th?q=casual+men+shirt" },
         { title: "Men Shirt", price: 1299, img: "https://tse2.mm.bing.net/th?q=designer+shirt+men" },
@@ -172,7 +199,33 @@ const data = {
 
     women: [
 
-        
+        { title: "Women Kurti Set", price: 1299, img: "https://tse4.mm.bing.net/th?q=women+kurti+set" },
+        { title: "Women Floral Dress", price: 1599, img: "https://tse2.mm.bing.net/th?q=women+floral+dress" },
+        { title: "Women A-Line Dress", price: 1899, img: "https://tse4.mm.bing.net/th?q=women+a+line+dress" },
+        { title: "Women Western Top", price: 699, img: "https://tse4.mm.bing.net/th?q=women+western+top" },
+        { title: "Women Puff Sleeve Top", price: 899, img: "https://tse3.mm.bing.net/th?q=women+puff+sleeve+top" },
+        { title: "Women Crop Top", price: 549, img: "https://tse2.mm.bing.net/th?q=women+crop+top" },
+        { title: "Women Palazzo", price: 749, img: "https://tse4.mm.bing.net/th?q=women+palazzo" },
+        { title: "Women Skirt Long", price: 1199, img: "https://tse3.mm.bing.net/th?q=women+long+skirt" },
+        { title: "Women Maxi Dress", price: 2299, img: "https://tse1.mm.bing.net/th?q=women+maxi+dress" },
+        { title: "Women Saree Silk", price: 3499, img: "https://tse3.mm.bing.net/th?q=silk+saree+women" },
+        { title: "Women Saree Banarasi", price: 4999, img: "https://tse3.mm.bing.net/th?q=banarasi+saree+women" },
+        { title: "Women Party Gown", price: 4199, img: "https://tse3.mm.bing.net/th?q=party+gown+women" },
+        { title: "Women Lehenga", price: 6999, img: "https://tse1.mm.bing.net/th?q=lehenga+women" },
+        { title: "Women Office Blazer", price: 2299, img: "https://tse1.mm.bing.net/th?q=blazer+women" },
+        { title: "Women Jeans High Waist", price: 1499, img: "https://tse4.mm.bing.net/th?q=high+waist+jeans+women" },
+        { title: "Women Jeggings", price: 999, img: "https://tse2.mm.bing.net/th?q=jeggings+women" },
+        { title: "Women Sweatshirt", price: 1199, img: "https://tse3.mm.bing.net/th?q=women+sweatshirt" },
+        { title: "Women Winter Jacket", price: 2899, img: "https://tse3.mm.bing.net/th?q=women+winter+jacket" },
+        { title: "Women Handbag Tote", price: 1899, img: "https://tse4.mm.bing.net/th?q=tote+handbag+women" },
+        { title: "Women Sling Bag", price: 1299, img: "https://tse3.mm.bing.net/th?q=sling+bag+women" },
+        { title: "Women Heels Sandals", price: 1699, img: "https://tse4.mm.bing.net/th?q=heels+sandals+women" },
+        { title: "Women Sports Shoes", price: 1999, img: "https://tse1.mm.bing.net/th?q=women+sports+shoes" },
+        { title: "Women Nightwear Set", price: 999, img: "https://tse3.mm.bing.net/th?q=nightwear+set+women" },
+        { title: "Women Scarf Designer", price: 599, img: "https://tse1.mm.bing.net/th?q=scarf+women+fashion" },
+        { title: "Women Sunglasses", price: 899, img: "https://tse4.mm.bing.net/th?q=sunglasses+women" },
+
+
         { title: "Women Saree", price: 999, img: "https://tse3.mm.bing.net/th?q=women+saree" },
         { title: "Women Saree", price: 2599, img: "https://tse2.mm.bing.net/th?q=silk+saree" },
         { title: "Women Saree", price: 3999, img: "https://tse2.mm.bing.net/th?q=designer+saree" },
@@ -322,7 +375,34 @@ const data = {
 
     kids: [
 
-           { title: "Kids Sweater", price: 799, img: "https://tse4.mm.bing.net/th?q=kids+sweater" },
+        { title: "Kids Polo T-Shirt", price: 449, img: "https://tse4.mm.bing.net/th?q=kids+polo+tshirt" },
+        { title: "Kids Cartoon T-Shirt", price: 349, img: "https://tse3.mm.bing.net/th?q=kids+cartoon+tshirt" },
+        { title: "Kids Full Sleeve Shirt", price: 549, img: "https://tse2.mm.bing.net/th?q=kids+shirt" },
+        { title: "Kids Hoodie Warm", price: 799, img: "https://tse3.mm.bing.net/th?q=kids+hoodie" },
+        { title: "Kids Winter Jacket", price: 1299, img: "https://tse2.mm.bing.net/th?q=kids+winter+jacket" },
+        { title: "Kids Track Suit", price: 999, img: "https://tse4.mm.bing.net/th?q=kids+tracksuit" },
+        { title: "Kids Pajama Set", price: 649, img: "https://tse3.mm.bing.net/th?q=kids+pajama+set" },
+        { title: "Kids Jogger Pants", price: 699, img: "https://tse2.mm.bing.net/th?q=kids+joggers" },
+        { title: "Kids Shorts Summer", price: 349, img: "https://tse3.mm.bing.net/th?q=kids+shorts" },
+        { title: "Kids Jeans Slimfit", price: 899, img: "https://tse1.mm.bing.net/th?q=kids+jeans" },
+        { title: "Kids Dress Party", price: 999, img: "https://tse2.mm.bing.net/th?q=kids+party+dress" },
+        { title: "Kids Frock Floral", price: 1199, img: "https://tse1.mm.bing.net/th?q=kids+frock+floral" },
+        { title: "Kids Lehenga Set", price: 1599, img: "https://tse2.mm.bing.net/th?q=kids+lehenga" },
+        { title: "Kids Ethnic Kurta", price: 899, img: "https://tse1.mm.bing.net/th?q=kids+kurta" },
+        { title: "Kids Cap Cartoon", price: 249, img: "https://tse3.mm.bing.net/th?q=kids+cap" },
+        { title: "Kids Backpack", price: 799, img: "https://tse3.mm.bing.net/th?q=kids+backpack" },
+        { title: "Kids School Bag", price: 999, img: "https://tse1.mm.bing.net/th?q=school+bag+kids" },
+        { title: "Kids Shoes Sports", price: 1199, img: "https://tse3.mm.bing.net/th?q=kids+sports+shoes" },
+        { title: "Kids Sandals Cute", price: 599, img: "https://tse1.mm.bing.net/th?q=kids+sandals" },
+        { title: "Kids Sneakers White", price: 1299, img: "https://tse4.mm.bing.net/th?q=kids+sneakers" },
+        { title: "Kids Toys Mini Car", price: 499, img: "https://tse3.mm.bing.net/th?q=kids+toy+car" },
+        { title: "Kids Plush Toy", price: 699, img: "https://tse1.mm.bing.net/th?q=kids+plush+toy" },
+        { title: "Kids Puzzle Game", price: 399, img: "https://tse2.mm.bing.net/th?q=kids+puzzle+toy" },
+        { title: "Kids Coloring Kit", price: 299, img: "https://tse3.mm.bing.net/th?q=kids+coloring+set" },
+        { title: "Kids Sunglasses", price: 449, img: "https://tse1.mm.bing.net/th?q=kids+sunglasses" },
+
+
+        { title: "Kids Sweater", price: 799, img: "https://tse4.mm.bing.net/th?q=kids+sweater" },
         { title: "Kids Sweater", price: 899, img: "https://tse3.mm.bing.net/th?q=winter+sweater+kids" },
         { title: "Kids Jacket", price: 999, img: "https://tse1.mm.bing.net/th?q=kids+jacket" },
         { title: "Kids Jacket", price: 1299, img: "https://tse3.mm.bing.net/th?q=winter+jacket+kids" },
@@ -462,7 +542,34 @@ const data = {
 
     electronics: [
 
-          { title: "Router", price: 1599, img: "https://tse4.mm.bing.net/th?q=wifi+router" },
+        { title: "Smartphone 5G", price: 18999, img: "https://tse3.mm.bing.net/th?q=5g+smartphone" },
+        { title: "Android Smartphone", price: 15999, img: "https://tse4.mm.bing.net/th?q=android+smartphone" },
+        { title: "Gaming Smartphone", price: 24999, img: "https://tse3.mm.bing.net/th?q=gaming+smartphone" },
+        { title: "Laptop Thin & Light", price: 52999, img: "https://tse3.mm.bing.net/th?q=thin+laptop" },
+        { title: "Gaming Laptop RGB", price: 79999, img: "https://tse3.mm.bing.net/th?q=gaming+laptop+rgb" },
+        { title: "Business Laptop", price: 65999, img: "https://tse3.mm.bing.net/th?q=business+laptop" },
+        { title: "Smart Tablet", price: 23999, img: "https://tse4.mm.bing.net/th?q=smart+tablet" },
+        { title: "iPad Tablet", price: 32999, img: "https://tse1.mm.bing.net/th?q=ipad+tablet" },
+        { title: "Smart Watch AMOLED", price: 3499, img: "https://tse3.mm.bing.net/th?q=amoled+smartwatch" },
+        { title: "Smart Watch Classic", price: 4999, img: "https://tse2.mm.bing.net/th?q=smartwatch+classic" },
+        { title: "Earbuds Bass", price: 1699, img: "https://tse3.mm.bing.net/th?q=earbuds+bass" },
+        { title: "ANC Earbuds", price: 2799, img: "https://tse1.mm.bing.net/th?q=anc+earbuds" },
+        { title: "Gaming Headphones", price: 1999, img: "https://tse3.mm.bing.net/th?q=gaming+headphones" },
+        { title: "Bluetooth Speaker", price: 1399, img: "https://tse2.mm.bing.net/th?q=bluetooth+speaker" },
+        { title: "Soundbar Speaker", price: 4999, img: "https://tse1.mm.bing.net/th?q=soundbar+speaker" },
+        { title: "4K Smart TV", price: 36999, img: "https://tse3.mm.bing.net/th?q=4k+smart+tv" },
+        { title: "QLED TV", price: 52999, img: "https://tse1.mm.bing.net/th?q=qled+tv" },
+        { title: "Mechanical Keyboard", price: 2499, img: "https://tse2.mm.bing.net/th?q=mechanical+keyboard" },
+        { title: "Gaming Mouse RGB", price: 1499, img: "https://tse2.mm.bing.net/th?q=gaming+mouse+rgb" },
+        { title: "Powerbank Fast Charge", price: 1699, img: "https://tse3.mm.bing.net/th?q=powerbank" },
+        { title: "Type-C Charger", price: 799, img: "https://tse2.mm.bing.net/th?q=type+c+charger" },
+        { title: "Wireless Router", price: 2399, img: "https://tse4.mm.bing.net/th?q=wireless+router" },
+        { title: "Portable SSD", price: 3999, img: "https://tse4.mm.bing.net/th?q=portable+ssd" },
+        { title: "External HDD", price: 4599, img: "https://tse2.mm.bing.net/th?q=external+hdd" },
+        { title: "Mini Drone Camera", price: 17999, img: "https://tse1.mm.bing.net/th?q=drone+camera" },
+
+
+        { title: "Router", price: 1599, img: "https://tse4.mm.bing.net/th?q=wifi+router" },
         { title: "Speaker System", price: 5999, img: "https://tse4.mm.bing.net/th?q=speaker+system" },
         { title: "Monitor", price: 10999, img: "https://tse4.mm.bing.net/th?q=monitor" },
         { title: "Pendrive", price: 499, img: "https://tse4.mm.bing.net/th?q=pendrive" },
@@ -630,48 +737,283 @@ const data = {
 };
 
 
+
+/* =============================
+   VARIABLES
+============================= */
 let currentCat = "men";
+let limit = 60;
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let popupItem = null;
 
-/* data = your 240 products here */
 
-let limit = 60; // initial load
+/* =============================
+   RENDER PRODUCTS
+============================= */
+function render() {
+    const box = document.getElementById("products");
+    box.innerHTML = "";
+
+    let list = [];
+
+    if (currentCat === "all-product") {
+        list = [
+            ...data.men,
+            ...data.women,
+            ...data.kids,
+            ...data.electronics
+        ].slice(0, limit);
+    } else {
+        list = data[currentCat];
+    }
+
+    list.forEach((p, i) => {
+        box.innerHTML += `
+      <div class="card" onclick="openProduct('${currentCat}',${i})">
+        <img src="${p.img}">
+        <h4>${p.title}</h4>
+        <p>₹${p.price}</p>
+      </div>`;
+    });
+
+    if (currentCat === "all-product" && limit < 500) {
+        box.innerHTML += `
+      <button class="loadBtn" onclick="loadMore()">Load More</button>
+    `;
+    }
+
+    updateFooterPos();
+}
+
+
+/* =============================
+   LOAD MORE
+============================= */
+function loadMore() {
+    limit += 60;
+    render();
+}
+
+
+/* =============================
+   CATEGORY CHANGE
+============================= */
+function showCategory(cat) {
+    currentCat = cat;
+    limit = 60;
+    document.getElementById("search").value = "";
+    setActive(cat);
+    setPageColor(cat);
+    render();
+}
+
+
+/* ACTIVE UI */
+function setActive(cat) {
+    document.querySelectorAll(".nav-links li").forEach(li => {
+        li.classList.remove("active");
+    });
+    document.querySelector(`[onclick="showCategory('${cat}')"]`).classList.add("active");
+}
+
+
+/* PAGE COLOR */
+function setPageColor(cat) {
+    document.body.className = "";
+    document.body.classList.add(`page-${cat}`);
+}
+
+
+/* =============================
+   SEARCH
+============================= */
+function searchProducts() {
+    const text = document.getElementById("search").value.toLowerCase();
+    const box = document.getElementById("products");
+    box.innerHTML = "";
+
+    let list = currentCat === "all-product"
+        ? [...data.men, ...data.women, ...data.kids, ...data.electronics]
+        : data[currentCat];
+
+    list.filter(x => x.title.toLowerCase().includes(text))
+        .forEach((p, i) => {
+            box.innerHTML += `
+          <div class="card" onclick="openProduct('${currentCat}',${i})">
+            <img src="${p.img}">
+            <h4>${p.title}</h4>
+            <p>₹${p.price}</p>
+          </div>`;
+        });
+
+    updateFooterPos();
+}
+
+
+/* =============================
+   PRODUCT POPUP
+============================= */
+function openProduct(cat, i) {
+    popupItem = data[cat][i];
+
+    document.getElementById("popupImg").src = popupItem.img;
+    document.getElementById("popupTitle").innerText = popupItem.title;
+    document.getElementById("popupPrice").innerText = "₹" + popupItem.price;
+    document.getElementById("productPopup").style.display = "flex";
+}
+
+function closeProduct() {
+    document.getElementById("productPopup").style.display = "none";
+}
+
+
+/* =============================
+   CART
+============================= */
+function addToCartPopup() {
+    cart.push(popupItem);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCart();
+    closeProduct();
+}
+
+function openCart() {
+    const list = document.getElementById("cartItems");
+    list.innerHTML = "";
+    cart.forEach(c => {
+        list.innerHTML += `<li>${c.title} — ₹${c.price}</li>`;
+    });
+    document.getElementById("cartModal").style.display = "flex";
+}
+
+function closeCart() {
+    document.getElementById("cartModal").style.display = "none";
+}
+
+function updateCart() {
+    document.getElementById("cartCount").innerText = cart.length;
+}
+
+
+/* =============================
+   SIGN-IN FULL PAGE
+============================= */
+function openLogin() {
+    document.getElementById("loginPopup").style.display = "flex";
+}
+
+function closeLogin() {
+    document.getElementById("loginPopup").style.display = "none";
+}
+
+
+/* =============================
+   HAMBURGER MENU
+============================= */
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+}
+
+
+/* =============================
+   FOOTER BOTTOM FIX
+============================= */
+function updateFooterPos() {
+    const footer = document.querySelector(".footer");
+    footer.style.position = "static";
+}
+
+
+/* =============================
+   DEFAULT INIT
+============================= */
+render();
+updateCart();
+setActive("men");
+setPageColor("men");
+
+
+
+// let limit = 60; // initial load
 
 function render() {
-  const box = document.getElementById("products");
-  box.innerHTML = "";
+    const box = document.getElementById("products");
+    box.innerHTML = "";
 
-  let list = [];
+    let list = [];
 
-  if (currentCat === "all-product") {
-    list = [
-      ...data.men,
-      ...data.women,
-      ...data.kids,
-      ...data.electronics
-    ].slice(0, limit);
-  } else {
-    list = data[currentCat];
-  }
+    if (currentCat === "all-product") {
 
-  list.forEach((p, i) => {
-    box.innerHTML += `
-      <div class="card" onclick="openProduct('${currentCat}', ${i})">
+        let men = [...data.men];
+        let women = [...data.women];
+        let kids = [...data.kids];
+        let electronics = [...data.electronics];
+
+        let max = Math.max(men.length, women.length, kids.length, electronics.length);
+
+        for (let i = 0; i < max; i++) {
+            if (men[i]) list.push({ ...men[i], cat: "men" });
+            if (women[i]) list.push({ ...women[i], cat: "women" });
+            if (kids[i]) list.push({ ...kids[i], cat: "kids" });
+            if (electronics[i]) list.push({ ...electronics[i], cat: "electronics" });
+        }
+
+        list = list.slice(0, limit);
+
+    } else {
+        list = data[currentCat].map(p => ({ ...p, cat: currentCat }));
+    }
+
+    list.forEach((p, i) => {
+        box.innerHTML += `
+      <div class="card" onclick="openProduct('${p.cat}', ${i})">
         <img loading="lazy" src="${p.img}">
         <h4>${p.title}</h4>
         <p>₹${p.price}</p>
       </div>
     `;
-  });
+    });
 
-  if (currentCat === "all-product" && limit < 240) {
-    box.innerHTML += `<button onclick="loadMore()" class="loadBtn">Load More</button>`;
-  }
+    if (currentCat === "all-product" && list.length < (data.men.length + data.women.length + data.kids.length + data.electronics.length)) {
+        box.innerHTML += `<button onclick="loadMore()" class="loadBtn">Load More</button>`;
+    }
+}
+
+function loadMore() {
+    limit += 60;
+    render();
 }
 
 
-function loadMore(){
-  limit += 60;
-  render();
+
+
+
+
+
+function showCategory(cat) {
+    currentCat = cat;
+
+    // navbar active
+    document.querySelectorAll(".nav-links li")
+        .forEach(li => li.classList.remove("active"));
+
+    let li = [...document.querySelectorAll(".nav-links li")]
+        .find(x => x.innerText.toLowerCase().includes(cat.replace("-", "")));
+    if (li) li.classList.add("active");
+
+    // remove old page classes
+    document.body.classList.remove(
+        "page-men",
+        "page-women",
+        "page-kids",
+        "page-electronics",
+        "page-all-product"
+    );
+
+    // add current class
+    document.body.classList.add(`page-${cat}`);
+
+    limit = 60; // reset load
+    render();
 }
+

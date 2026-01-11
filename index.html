@@ -1,83 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazon Clone Project</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone - Manjar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="logo">Amazon</div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Amazon</div>
 
-  <ul class="nav-links">
-      <li onclick="showCategory('all-product')">All-Product</li>
-      <li onclick="showCategory('men')">Men</li>
-      <li onclick="showCategory('women')">Women</li>
-      <li onclick="showCategory('kids')">Kids</li>
-      <li onclick="showCategory('electronics')">Electronics</li>
-  </ul>
+        <ul class="nav-links" id="navLinks">
+            <li onclick="showCategory('all-product')">All Products</li>
+            <li onclick="showCategory('men')">Men</li>
+            <li onclick="showCategory('women')">Women</li>
+            <li onclick="showCategory('kids')">Kids</li>
+            <li onclick="showCategory('electronics')">Electronics</li>
+        </ul>
 
-  <div class="searchBox">
-    <input type="text" id="search" placeholder="Search..." onkeyup="searchProducts()">
-    <button>🔍</button>
-  </div>
+        <div class="searchBox">
+            <input type="text" id="search" placeholder="Search..." onkeyup="searchProducts()">
+            <button>🔍</button>
+        </div>
 
-  <button class="signinBtn" onclick="openLogin()">Sign In</button>
+        <button class="signinBtn" onclick="openLogin()">Sign In</button>
 
-  <div class="cart" onclick="openCart()">🛒 <span id="cartCount">0</span></div>
-</nav>
+        <div class="cart" onclick="openCart()">🛒 <span id="cartCount">0</span></div>
 
-
-<section id="products" class="products"></section>
-
-
-<!-- PRODUCT POPUP -->
-<div id="productPopup" class="productPopup">
-  <div class="popupContent">
-    <span class="closePopup" onclick="closeProduct()">✖</span>
-    <img id="popupImg">
-    <h3 id="popupTitle"></h3>
-    <p id="popupPrice"></p>
-    <button onclick="addToCartPopup()">Add to Cart</button>
-  </div>
-</div>
+        <!-- Hamburger -->
+        <div class="menuBtn" onclick="toggleMenu()">☰</div>
+    </nav>
 
 
-<!-- LOGIN POPUP -->
-<div id="loginPopup" class="loginPopup">
-  <div class="loginBox">
-    <span class="closeLogin" onclick="closeLogin()">✖</span>
-    <h2>Sign In</h2>
-    <input type="text" placeholder="Email or Phone">
-    <input type="password" placeholder="Password">
-    <button>Login</button>
-    <p>New user? <a href="#">Register</a></p>
-  </div>
-</div>
+    <!-- PRODUCT SECTION -->
+    <section id="products" class="products"></section>
 
 
-<!-- CART -->
-<div id="cartModal" class="cartModal">
-  <div class="cartContent">
-    <h2>Your Cart</h2>
-    <ul id="cartItems"></ul>
-    <button onclick="closeCart()">Close</button>
-  </div>
-</div>
+    <!-- POPUP FULL DETAILS -->
+    <div id="productPopup" class="fullPopup">
+        <div class="popupContainer">
+            <span class="popupClose" onclick="closeProduct()">✖</span>
+            <img id="popupImg">
+            <h2 id="popupTitle"></h2>
+            <h3 id="popupPrice"></h3>
+            <p id="popupDesc">High quality premium product from Amazon Clone Collection.</p>
+            <button onclick="addToCartPopup()" class="addBtn">Add to Cart</button>
+        </div>
+    </div>
 
 
-<footer>
-  <div class="row">
-      <div><h3>About</h3><p>Company</p><p>Careers</p></div>
-      <div><h3>Connect</h3><p>Instagram</p><p>Twitter</p></div>
-      <div><h3>Help</h3><p>Payments</p><p>Returns</p></div>
-      <div><h3>Earn</h3><p>Sell Products</p><p>Affiliate</p></div>
-  </div>
-  <p class="copy">© 2026 Amazon Clone by Manjar</p>
-</footer>
+    <!-- SIGN-IN FULL PAGE -->
+    <div id="loginPopup" class="loginFull">
+        <div class="loginBoxFull">
+            <span class="closeLogin" onclick="closeLogin()">✖</span>
+            <h1>Register / Sign In</h1>
 
-<script src="script.js"></script>
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Phone Number">
+            <input type="password" placeholder="Password">
+
+            <select>
+                <option>Country</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>UAE</option>
+                <option>Canada</option>
+                <option>America</option>
+                <option>Nepaal</option>
+            </select>
+
+            <div class="gender">
+                <label><input type="radio" name="g"> Male</label>
+                <label><input type="radio" name="g"> Female</label>
+                <label><input type="radio" name="g"> Other</label>
+            </div>
+
+            <button class="loginBtn">Continue</button>
+        </div>
+    </div>
+
+
+    <!-- CART -->
+    <div id="cartModal" class="cartModal">
+        <div class="cartContent">
+            <h2>Your Cart</h2>
+            <ul id="cartItems"></ul>
+            <button onclick="closeCart()">Close</button>
+        </div>
+    </div>
+
+
+    <!-- PREMIUM FOOTER -->
+    <footer class="footer">
+        <div class="footerCols">
+
+            <div>
+                <h3>Company</h3>
+                <p>Amazon Clone Pvt Ltd</p>
+                <p>Since 2026</p>
+                <p>Founder: Manjar</p>
+                <p>India - Delhi</p>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>📩 Email: support@amazonclone.com</p>
+                <p>📞 Phone: +91 8252486411</p>
+                <p>🌍 Country: Okhla, Zakir Nagar, Delhi,India</p>
+            </div>
+
+            <div>
+                <h3>Social Links</h3>
+                <div class="socialLinks">
+                    <a href="https://www.instagram.com/sr.manzaralam?igsh=MWt1bzIyMmFsYWtycw==" target="_blank"
+                        class="icon insta">📸</a>
+                    <a href="#" target="_blank" class="icon fb">📘</a>
+                    <a href="#" target="_blank" class="icon tw">🐦</a>
+                    <a href="#" target="_blank" class="icon li">💼</a>
+                </div>
+                <p class="socialNote">* Click icons to add your social links *</p>
+            </div>
+
+            <div>
+                <h3>Ratings & Reviews</h3>
+                <p>⭐ 4.9 / 5.0</p>
+                <p>10,000+ Happy Customers</p>
+                <p>Premium Quality & Fast Delivery</p>
+            </div>
+
+        </div>
+
+        <p class="copy">© 2026 Amazon Clone - Designed by Manjar</p>
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
