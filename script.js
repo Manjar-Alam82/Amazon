@@ -4,6 +4,28 @@
 const data = {
     men: [
 
+        { title: "Men Casual Shirt", price: 799, img: "https://tse1.mm.bing.net/th?q=men+casual+shirt" },
+        { title: "Men Denim Jacket", price: 1899, img: "https://tse1.mm.bing.net/th?q=men+denim+jacket" },
+        { title: "Men Hooded Sweatshirt", price: 1299, img: "https://tse1.mm.bing.net/th?q=men+hoodie" },
+        { title: "Men Polo T-Shirt", price: 699, img: "https://tse1.mm.bing.net/th?q=men+polo+tshirt" },
+        { title: "Men Formal Shirt", price: 999, img: "https://tse1.mm.bing.net/th?q=men+formal+shirt" },
+        { title: "Men Checked Shirt", price: 849, img: "https://tse1.mm.bing.net/th?q=men+checked+shirt" },
+        { title: "Men Slim Fit Jeans", price: 1599, img: "https://tse1.mm.bing.net/th?q=men+slim+jeans" },
+        { title: "Men Regular Jeans", price: 1299, img: "https://tse1.mm.bing.net/th?q=men+regular+jeans" },
+        { title: "Men Sports Shoes", price: 2199, img: "https://tse1.mm.bing.net/th?q=men+sport+shoes" },
+        { title: "Men Leather Shoes", price: 2799, img: "https://tse1.mm.bing.net/th?q=men+leather+shoes" },
+        { title: "Men Sneakers", price: 1999, img: "https://tse1.mm.bing.net/th?q=men+sneakers" },
+        { title: "Men Kurta Set", price: 1199, img: "https://tse1.mm.bing.net/th?q=men+kurta" },
+        { title: "Men Blazer", price: 3499, img: "https://tse1.mm.bing.net/th?q=men+blazer" },
+        { title: "Men Suit Set", price: 4999, img: "https://tse1.mm.bing.net/th?q=men+formal+suit" },
+        { title: "Men Track Pants", price: 749, img: "https://tse1.mm.bing.net/th?q=men+track+pants" },
+        { title: "Men Shorts", price: 599, img: "https://tse1.mm.bing.net/th?q=men+shorts" },
+        { title: "Men Winter Jacket", price: 2399, img: "https://tse1.mm.bing.net/th?q=men+winter+jacket" },
+        { title: "Men Analog Watch", price: 1699, img: "https://tse1.mm.bing.net/th?q=men+analog+watch" },
+        { title: "Men Digital Watch", price: 1999, img: "https://tse1.mm.bing.net/th?q=men+digital+watch" },
+        { title: "Men Sunglasses", price: 899, img: "https://tse1.mm.bing.net/th?q=men+sunglasses" },
+
+
         { title: "Men Formal Shirt", price: 999, img: "https://tse1.mm.bing.net/th?q=men+formal+shirt" },
         { title: "Men Striped Shirt", price: 899, img: "https://tse2.mm.bing.net/th?q=striped+shirt+men" },
         { title: "Men Checked Shirt", price: 849, img: "https://tse1.mm.bing.net/th?q=checked+shirt+men" },
@@ -198,6 +220,28 @@ const data = {
     ],
 
     women: [
+        { title: "Women Anarkali Suit", price: 1699, img: "https://tse1.mm.bing.net/th?q=women+anarkali+suit" },
+        { title: "Women Silk Saree", price: 2499, img: "https://tse1.mm.bing.net/th?q=women+silk+saree" },
+        { title: "Women Western Top", price: 599, img: "https://tse1.mm.bing.net/th?q=women+western+top" },
+        { title: "Women Printed Kurti", price: 899, img: "https://tse1.mm.bing.net/th?q=women+printed+kurti" },
+        { title: "Women Party Gown", price: 2899, img: "https://tse1.mm.bing.net/th?q=women+party+gown" },
+        { title: "Women Jeans Slim Fit", price: 1199, img: "https://tse1.mm.bing.net/th?q=women+slim+jeans" },
+        { title: "Women Palazzo Pants", price: 799, img: "https://tse1.mm.bing.net/th?q=women+palazzo" },
+        { title: "Women Long Skirt", price: 699, img: "https://tse1.mm.bing.net/th?q=women+long+skirt" },
+        { title: "Women Hoodie Winter", price: 1399, img: "https://tse1.mm.bing.net/th?q=women+hoodie" },
+        { title: "Women Sneakers", price: 1699, img: "https://tse1.mm.bing.net/th?q=women+sneakers" },
+        { title: "Women Heels Stiletto", price: 1899, img: "https://tse1.mm.bing.net/th?q=women+heels" },
+        { title: "Women Handbag", price: 1499, img: "https://tse1.mm.bing.net/th?q=women+handbag" },
+        { title: "Women Wallet", price: 599, img: "https://tse1.mm.bing.net/th?q=women+wallet" },
+        { title: "Women Earrings Set", price: 399, img: "https://tse1.mm.bing.net/th?q=women+earrings+set" },
+        { title: "Women Necklace Set", price: 999, img: "https://tse1.mm.bing.net/th?q=women+necklace+set" },
+        { title: "Women Bangles Set", price: 499, img: "https://tse1.mm.bing.net/th?q=women+bangles" },
+        { title: "Women Watches", price: 1299, img: "https://tse1.mm.bing.net/th?q=women+watch" },
+        { title: "Women Sunglasses", price: 799, img: "https://tse1.mm.bing.net/th?q=women+sunglasses" },
+        { title: "Women Flats Sandals", price: 699, img: "https://tse1.mm.bing.net/th?q=women+flat+sandals" },
+        { title: "Women Perfume", price: 1099, img: "https://tse1.mm.bing.net/th?q=women+perfume" },
+
+
 
         { title: "Women Kurti Set", price: 1299, img: "https://tse4.mm.bing.net/th?q=women+kurti+set" },
         { title: "Women Floral Dress", price: 1599, img: "https://tse2.mm.bing.net/th?q=women+floral+dress" },
@@ -375,6 +419,29 @@ const data = {
 
     kids: [
 
+
+        { title: "Kids Cotton T-Shirt", price: 399, img: "https://tse1.mm.bing.net/th?q=kids+cotton+tshirt" },
+        { title: "Kids Cartoon Hoodie", price: 799, img: "https://tse1.mm.bing.net/th?q=kids+cartoon+hoodie" },
+        { title: "Kids Denim Shorts", price: 449, img: "https://tse1.mm.bing.net/th?q=kids+denim+shorts" },
+        { title: "Kids Track Suit", price: 999, img: "https://tse1.mm.bing.net/th?q=kids+tracksuit" },
+        { title: "Kids Party Dress", price: 1299, img: "https://tse1.mm.bing.net/th?q=kids+party+dress" },
+        { title: "Kids Raincoat", price: 699, img: "https://tse1.mm.bing.net/th?q=kids+raincoat" },
+        { title: "Kids Night Suit", price: 599, img: "https://tse1.mm.bing.net/th?q=kids+nightsuit" },
+        { title: "Kids Thermal Set", price: 899, img: "https://tse1.mm.bing.net/th?q=kids+thermal+set" },
+        { title: "Kids Sports Shoes", price: 999, img: "https://tse1.mm.bing.net/th?q=kids+sports+shoes" },
+        { title: "Kids School Shoes", price: 899, img: "https://tse1.mm.bing.net/th?q=kids+school+shoes" },
+        { title: "Kids Float Sandals", price: 549, img: "https://tse1.mm.bing.net/th?q=kids+sandals" },
+        { title: "Kids Cartoon Backpack", price: 699, img: "https://tse1.mm.bing.net/th?q=kids+backpack" },
+        { title: "Kids Lunch Box", price: 299, img: "https://tse1.mm.bing.net/th?q=kids+lunch+box" },
+        { title: "Kids Water Bottle", price: 249, img: "https://tse1.mm.bing.net/th?q=kids+water+bottle" },
+        { title: "Kids Toy Car", price: 549, img: "https://tse1.mm.bing.net/th?q=kids+toy+car" },
+        { title: "Kids Building Blocks", price: 699, img: "https://tse1.mm.bing.net/th?q=kids+building+blocks" },
+        { title: "Kids Story Book", price: 199, img: "https://tse1.mm.bing.net/th?q=kids+story+book" },
+        { title: "Kids Wrist Watch", price: 499, img: "https://tse1.mm.bing.net/th?q=kids+watch" },
+        { title: "Kids Cap & Gloves", price: 299, img: "https://tse1.mm.bing.net/th?q=kids+winter+cap" },
+        { title: "Kids Sunglasses", price: 349, img: "https://tse1.mm.bing.net/th?q=kids+sunglasses" },
+
+
         { title: "Kids Polo T-Shirt", price: 449, img: "https://tse4.mm.bing.net/th?q=kids+polo+tshirt" },
         { title: "Kids Cartoon T-Shirt", price: 349, img: "https://tse3.mm.bing.net/th?q=kids+cartoon+tshirt" },
         { title: "Kids Full Sleeve Shirt", price: 549, img: "https://tse2.mm.bing.net/th?q=kids+shirt" },
@@ -541,6 +608,29 @@ const data = {
     ],
 
     electronics: [
+
+
+        { title: "Smart LED TV", price: 18999, img: "https://tse1.mm.bing.net/th?q=smart+led+tv" },
+        { title: "Gaming Laptop", price: 64999, img: "https://tse1.mm.bing.net/th?q=gaming+laptop" },
+        { title: "Wireless Earbuds", price: 1499, img: "https://tse1.mm.bing.net/th?q=wireless+earbuds" },
+        { title: "Bluetooth Headphones", price: 1999, img: "https://tse1.mm.bing.net/th?q=bluetooth+headphones" },
+        { title: "Smart Watch", price: 2499, img: "https://tse1.mm.bing.net/th?q=smart+watch" },
+        { title: "Portable Speaker", price: 1299, img: "https://tse1.mm.bing.net/th?q=portable+speaker" },
+        { title: "Sound Bar System", price: 4499, img: "https://tse1.mm.bing.net/th?q=soundbar" },
+        { title: "Android Tablet", price: 7999, img: "https://tse1.mm.bing.net/th?q=android+tablet" },
+        { title: "DSLR Camera", price: 42999, img: "https://tse1.mm.bing.net/th?q=dslr+camera" },
+        { title: "Action Camera", price: 6999, img: "https://tse1.mm.bing.net/th?q=action+camera" },
+        { title: "Drone Camera", price: 11999, img: "https://tse1.mm.bing.net/th?q=drone+camera" },
+        { title: "VR Headset", price: 2999, img: "https://tse1.mm.bing.net/th?q=vr+headset" },
+        { title: "Mechanical Keyboard", price: 2499, img: "https://tse1.mm.bing.net/th?q=mechanical+keyboard" },
+        { title: "Gaming Mouse", price: 899, img: "https://tse1.mm.bing.net/th?q=gaming+mouse" },
+        { title: "External Hard Drive", price: 3999, img: "https://tse1.mm.bing.net/th?q=external+hard+drive" },
+        { title: "USB Pen Drive", price: 399, img: "https://tse1.mm.bing.net/th?q=pendrive+32gb" },
+        { title: "WiFi Router", price: 1399, img: "https://tse1.mm.bing.net/th?q=wifi+router" },
+        { title: "Power Bank", price: 1499, img: "https://tse1.mm.bing.net/th?q=power+bank" },
+        { title: "Smart Home Speaker", price: 2999, img: "https://tse1.mm.bing.net/th?q=smart+home+speaker" },
+        { title: "Portable Projector", price: 8999, img: "https://tse1.mm.bing.net/th?q=portable+projector" },
+
 
         { title: "Smartphone 5G", price: 18999, img: "https://tse3.mm.bing.net/th?q=5g+smartphone" },
         { title: "Android Smartphone", price: 15999, img: "https://tse4.mm.bing.net/th?q=android+smartphone" },
@@ -737,283 +827,389 @@ const data = {
 };
 
 
-
-/* =============================
-   VARIABLES
-============================= */
+/* ============================
+   VARIABLES + DATA LOAD
+============================ */
 let currentCat = "men";
 let limit = 60;
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let user = JSON.parse(localStorage.getItem("user")) || null;
 let popupItem = null;
 
-
-/* =============================
-   RENDER PRODUCTS
-============================= */
-function render() {
+/* ============================
+   CATEGORY + RENDER SYSTEM
+============================ */
+function render(){
     const box = document.getElementById("products");
     box.innerHTML = "";
 
     let list = [];
 
-    if (currentCat === "all-product") {
-        list = [
-            ...data.men,
-            ...data.women,
-            ...data.kids,
-            ...data.electronics
-        ].slice(0, limit);
-    } else {
-        list = data[currentCat];
+    if(currentCat === "all-product"){
+        let men = data.men.map((p,i)=>({...p,cat:"men",idx:i}));
+        let women = data.women.map((p,i)=>({...p,cat:"women",idx:i}));
+        let kids = data.kids.map((p,i)=>({...p,cat:"kids",idx:i}));
+        let electronics = data.electronics.map((p,i)=>({...p,cat:"electronics",idx:i}));
+
+        let max = Math.max(men.length,women.length,kids.length,electronics.length);
+
+        for(let i=0;i<max;i++){
+            if(men[i]) list.push(men[i]);
+            if(women[i]) list.push(women[i]);
+            if(kids[i]) list.push(kids[i]);
+            if(electronics[i]) list.push(electronics[i]);
+        }
+
+        list = list.slice(0,limit);
+    } 
+    else {
+        list = data[currentCat].map((p,i)=>({...p,cat:currentCat,idx:i}));
     }
 
-    list.forEach((p, i) => {
+    list.forEach(p=>{
         box.innerHTML += `
-      <div class="card" onclick="openProduct('${currentCat}',${i})">
-        <img src="${p.img}">
-        <h4>${p.title}</h4>
-        <p>₹${p.price}</p>
-      </div>`;
-    });
-
-    if (currentCat === "all-product" && limit < 500) {
-        box.innerHTML += `
-      <button class="loadBtn" onclick="loadMore()">Load More</button>
-    `;
-    }
-
-    updateFooterPos();
-}
-
-
-/* =============================
-   LOAD MORE
-============================= */
-function loadMore() {
-    limit += 60;
-    render();
-}
-
-
-/* =============================
-   CATEGORY CHANGE
-============================= */
-function showCategory(cat) {
-    currentCat = cat;
-    limit = 60;
-    document.getElementById("search").value = "";
-    setActive(cat);
-    setPageColor(cat);
-    render();
-}
-
-
-/* ACTIVE UI */
-function setActive(cat) {
-    document.querySelectorAll(".nav-links li").forEach(li => {
-        li.classList.remove("active");
-    });
-    document.querySelector(`[onclick="showCategory('${cat}')"]`).classList.add("active");
-}
-
-
-/* PAGE COLOR */
-function setPageColor(cat) {
-    document.body.className = "";
-    document.body.classList.add(`page-${cat}`);
-}
-
-
-/* =============================
-   SEARCH
-============================= */
-function searchProducts() {
-    const text = document.getElementById("search").value.toLowerCase();
-    const box = document.getElementById("products");
-    box.innerHTML = "";
-
-    let list = currentCat === "all-product"
-        ? [...data.men, ...data.women, ...data.kids, ...data.electronics]
-        : data[currentCat];
-
-    list.filter(x => x.title.toLowerCase().includes(text))
-        .forEach((p, i) => {
-            box.innerHTML += `
-          <div class="card" onclick="openProduct('${currentCat}',${i})">
+        <div class="card" onclick="openProduct('${p.cat}',${p.idx})">
             <img src="${p.img}">
             <h4>${p.title}</h4>
             <p>₹${p.price}</p>
-          </div>`;
-        });
-
-    updateFooterPos();
+        </div>`;
+    });
 }
 
+function showCategory(cat){
+    currentCat = cat;
+    limit = 60;
+    document.body.className="";
+    document.body.classList.add(`page-${cat}`);
+    render();
+}
 
-/* =============================
-   PRODUCT POPUP
-============================= */
-function openProduct(cat, i) {
+/* ============================
+   SEARCH (HYBRID + STRONG)
+============================ */
+function searchProducts(){
+    const q = document.getElementById("search").value.toLowerCase().trim();
+    const box = document.getElementById("products");
+    box.innerHTML = "";
+
+    let base = currentCat==="all-product"
+    ? [
+        ...data.men.map((p,i)=>({...p,cat:"men",idx:i})),
+        ...data.women.map((p,i)=>({...p,cat:"women",idx:i})),
+        ...data.kids.map((p,i)=>({...p,cat:"kids",idx:i})),
+        ...data.electronics.map((p,i)=>({...p,cat:"electronics",idx:i}))
+    ]
+    : data[currentCat].map((p,i)=>({...p,cat:currentCat,idx:i}));
+
+    if(!q){ render(); return; }
+
+    function score(t){
+        t=t.toLowerCase();
+        if(t===q) return 1;
+        if(t.startsWith(q)) return 0.9;
+        if(t.includes(q)) return 0.8;
+        let m=0;
+        for(let i=0;i<Math.min(t.length,q.length);i++){
+            if(t[i]===q[i]) m++;
+        }
+        return m/t.length;
+    }
+
+    base.map(p=>({...p,s:score(p.title)}))
+    .filter(p=>p.s>0.25)
+    .sort((a,b)=>b.s-a.s)
+    .forEach(p=>{
+        box.innerHTML+=`
+        <div class="card" onclick="openProduct('${p.cat}',${p.idx})">
+            <img src="${p.img}">
+            <h4>${p.title}</h4>
+            <p>₹${p.price}</p>
+        </div>`;
+    });
+}
+
+/* ============================
+   POPUP PRODUCT DETAILS
+============================ */
+function openProduct(cat,i){
     popupItem = data[cat][i];
-
     document.getElementById("popupImg").src = popupItem.img;
     document.getElementById("popupTitle").innerText = popupItem.title;
-    document.getElementById("popupPrice").innerText = "₹" + popupItem.price;
-    document.getElementById("productPopup").style.display = "flex";
+    document.getElementById("popupPrice").innerText = "₹"+popupItem.price;
+    document.getElementById("productPopup").style.display="flex";
+}
+function closeProduct(){
+    document.getElementById("productPopup").style.display="none";
 }
 
-function closeProduct() {
-    document.getElementById("productPopup").style.display = "none";
-}
-
-
-/* =============================
-   CART
-============================= */
-function addToCartPopup() {
-    cart.push(popupItem);
-    localStorage.setItem("cart", JSON.stringify(cart));
+/* ============================
+   ADD TO CART SYSTEM
+============================ */
+function addToCartPopup(){
+    let size = document.getElementById("sizeSelect").value;
+    cart.push({...popupItem,size});
+    localStorage.setItem("cart",JSON.stringify(cart));
     updateCart();
     closeProduct();
 }
 
-function openCart() {
-    const list = document.getElementById("cartItems");
-    list.innerHTML = "";
-    cart.forEach(c => {
-        list.innerHTML += `<li>${c.title} — ₹${c.price}</li>`;
-    });
-    document.getElementById("cartModal").style.display = "flex";
-}
-
-function closeCart() {
-    document.getElementById("cartModal").style.display = "none";
-}
-
-function updateCart() {
+function updateCart(){
     document.getElementById("cartCount").innerText = cart.length;
 }
 
-
-/* =============================
-   SIGN-IN FULL PAGE
-============================= */
-function openLogin() {
-    document.getElementById("loginPopup").style.display = "flex";
+/* ============================
+   CART PAGE
+============================ */
+function openCart(){
+    document.getElementById("cartPage").style.display="flex";
+    renderCartPage();
+}
+function closeCartPage(){
+    document.getElementById("cartPage").style.display="none";
 }
 
-function closeLogin() {
-    document.getElementById("loginPopup").style.display = "none";
-}
+function renderCartPage(){
+    const list = document.getElementById("cartList");
+    list.innerHTML="";
+    let total=0;
 
-
-/* =============================
-   HAMBURGER MENU
-============================= */
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
-}
-
-
-/* =============================
-   FOOTER BOTTOM FIX
-============================= */
-function updateFooterPos() {
-    const footer = document.querySelector(".footer");
-    footer.style.position = "static";
-}
-
-
-/* =============================
-   DEFAULT INIT
-============================= */
-render();
-updateCart();
-setActive("men");
-setPageColor("men");
-
-
-
-// let limit = 60; // initial load
-
-function render() {
-    const box = document.getElementById("products");
-    box.innerHTML = "";
-
-    let list = [];
-
-    if (currentCat === "all-product") {
-
-        let men = [...data.men];
-        let women = [...data.women];
-        let kids = [...data.kids];
-        let electronics = [...data.electronics];
-
-        let max = Math.max(men.length, women.length, kids.length, electronics.length);
-
-        for (let i = 0; i < max; i++) {
-            if (men[i]) list.push({ ...men[i], cat: "men" });
-            if (women[i]) list.push({ ...women[i], cat: "women" });
-            if (kids[i]) list.push({ ...kids[i], cat: "kids" });
-            if (electronics[i]) list.push({ ...electronics[i], cat: "electronics" });
-        }
-
-        list = list.slice(0, limit);
-
-    } else {
-        list = data[currentCat].map(p => ({ ...p, cat: currentCat }));
-    }
-
-    list.forEach((p, i) => {
-        box.innerHTML += `
-      <div class="card" onclick="openProduct('${p.cat}', ${i})">
-        <img loading="lazy" src="${p.img}">
-        <h4>${p.title}</h4>
-        <p>₹${p.price}</p>
-      </div>
-    `;
+    cart.forEach((c,i)=>{
+        total+=c.price;
+        list.innerHTML+=`
+        <div class="cartItem">
+            <img src="${c.img}">
+            <div>
+                <h4>${c.title}</h4>
+                <p>Size: ${c.size}</p>
+                <p>₹${c.price}</p>
+            </div>
+            <button class="removeBtn" onclick="removeCart(${i})">Remove</button>
+        </div>`;
     });
 
-    if (currentCat === "all-product" && list.length < (data.men.length + data.women.length + data.kids.length + data.electronics.length)) {
-        box.innerHTML += `<button onclick="loadMore()" class="loadBtn">Load More</button>`;
+    document.getElementById("cartTotal").innerText = total;
+}
+
+function removeCart(i){
+    cart.splice(i,1);
+    localStorage.setItem("cart",JSON.stringify(cart));
+    updateCart();
+    renderCartPage();
+}
+
+/* ============================
+   CHECKOUT + ADDRESS
+============================ */
+function goCheckout(){
+    closeCartPage();
+    document.getElementById("checkoutPage").style.display="block";
+}
+function closeCheckout(){
+    document.getElementById("checkoutPage").style.display="none";
+}
+
+function goPayment(){
+    document.getElementById("checkoutPage").style.display="none";
+    document.getElementById("paymentPage").style.display="block";
+}
+
+/* ============================
+   PAYMENT + UPI
+============================ */
+function payUPI(app){
+    alert("Redirecting to "+app+" UPI...");
+}
+
+function confirmOrder(){
+    alert("Order Successful! Thank you for shopping.");
+    cart=[];
+    localStorage.setItem("cart",JSON.stringify(cart));
+    updateCart();
+    document.getElementById("paymentPage").style.display="none";
+}
+
+/* ============================
+   RETURN SYSTEM
+============================ */
+function closeReturn(){
+    document.getElementById("returnPage").style.display="none";
+}
+
+/* ============================
+   LOGIN + REGISTER
+============================ */
+function openLogin(){
+    document.getElementById("loginPopup").style.display="flex";
+}
+function closeLogin(){
+    document.getElementById("loginPopup").style.display="none";
+}
+
+function doLogin(){
+    let n=document.getElementById("nameInput").value.trim();
+    let e=document.getElementById("emailInput").value.trim();
+    let p=document.getElementById("passInput").value.trim();
+
+    if(!n||!e||!p){
+        alert("Enter Name, Email & Password!");
+        return;
+    }
+
+    if(!user){
+        user={name:n,email:e,password:p};
+        localStorage.setItem("user",JSON.stringify(user));
+        alert("Account Created! Login Again");
+        openLogin();
+        return;
+    }
+
+    if(user.name===n&&user.email===e&&user.password===p){
+        unlockDashboard();
+        closeLogin();
+    } else {
+        alert("Wrong Credentials!");
     }
 }
 
-function loadMore() {
-    limit += 60;
-    render();
+function forgotPass(){
+    document.getElementById("newAccountForm").style.display="block";
 }
 
+function saveNewUser(){
+    let n=document.getElementById("newName").value.trim();
+    let e=document.getElementById("newEmail").value.trim();
+    let p=document.getElementById("newPass").value.trim();
 
+    if(!n||!e||!p){
+        alert("Fill all new account fields!");
+        return;
+    }
 
+    user={name:n,email:e,password:p};
+    localStorage.setItem("user",JSON.stringify(user));
 
-
-
-
-function showCategory(cat) {
-    currentCat = cat;
-
-    // navbar active
-    document.querySelectorAll(".nav-links li")
-        .forEach(li => li.classList.remove("active"));
-
-    let li = [...document.querySelectorAll(".nav-links li")]
-        .find(x => x.innerText.toLowerCase().includes(cat.replace("-", "")));
-    if (li) li.classList.add("active");
-
-    // remove old page classes
-    document.body.classList.remove(
-        "page-men",
-        "page-women",
-        "page-kids",
-        "page-electronics",
-        "page-all-product"
-    );
-
-    // add current class
-    document.body.classList.add(`page-${cat}`);
-
-    limit = 60; // reset load
-    render();
+    alert("New Account Saved! Login Again.");
+    document.getElementById("newAccountForm").style.display="none";
+    openLogin();
 }
 
+/* ============================
+   UNLOCK DASHBOARD
+============================ */
+function unlockDashboard(){
+    document.getElementById("products").style.display="grid";
+    document.getElementById("cartIcon").style.display="block";
+    document.getElementById("loginBtn").style.display="none";
+    document.getElementById("welcomeUser").style.display="block";
+    document.getElementById("welcomeUser").innerText=
+    "WELCOME "+user.name.toUpperCase();
+}
+
+/* ============================
+   SIDEBAR
+============================ */
+document.getElementById("sideMenuBtn").onclick=()=>{
+    document.getElementById("sidebar").classList.add("show");
+}
+function closeSidebar(){
+    document.getElementById("sidebar").classList.remove("show");
+}
+
+function showSubCat(cat,sub){
+    alert(cat+" → "+sub);
+}
+
+/* ============================
+   BANNER AUTO SLIDE
+============================ */
+let slideIndex=0;
+setInterval(()=>{
+    slideIndex++;
+    document.getElementById("bannerSlider").style.transform=
+    `translateX(-${slideIndex*100}%)`;
+    if(slideIndex>=4) slideIndex=0;
+},5000);
+
+// /* ============================
+//    FORCE LOGIN FIRST TIME
+// ============================ */
+openLogin();
+render();
+updateCart();
+showCategory("men");
+
+
+
+
+
+/* HERO BANNER AUTO SLIDER */
+// let hero = document.querySelector("#heroBanner");
+// let slides = document.querySelectorAll("#heroBanner .bannerSlide");
+// let hIndex = 0;
+
+// setInterval(()=>{
+//     hIndex++;
+//     hero.style.transform = `translateX(-${hIndex*100}%)`;
+//     if(hIndex >= slides.length-1){
+//         setTimeout(()=>{
+//             hIndex = 0;
+//             hero.style.transform = `translateX(0%)`;
+//         },500);
+//     }
+// },5000);
+
+
+
+/* HERO BANNER AUTO SLIDER */
+let hero = document.querySelector("#heroBanner");
+let slides = document.querySelectorAll("#heroBanner .bannerSlide");
+let hIndex = 0;
+
+setInterval(()=>{
+    hIndex++;
+    hero.style.transform = `translateX(-${hIndex*100}%)`;
+    if(hIndex >= slides.length-1){
+        setTimeout(()=>{
+            hIndex = 0;
+            hero.style.transform = `translateX(0%)`;
+        },500);
+    }
+},5000);
+
+
+
+
+
+/* =============== CATEGORY BANNER AUTO SLIDE =============== */
+let cbIndex = 0;
+function slideCategoryBanner(){
+    cbIndex++;
+    document.querySelector(".catBannerTrack").style.transform =
+        `translateX(-${cbIndex*100}%)`;
+    if(cbIndex >= 3){
+        setTimeout(()=>{
+            cbIndex = 0;
+            document.querySelector(".catBannerTrack").style.transform = `translateX(0%)`;
+        },600);
+    }
+}
+setInterval(slideCategoryBanner,5000);
+
+
+
+
+let cb = 0;
+let totalCB = document.querySelectorAll(".catBannerSlide").length;
+
+setInterval(()=>{
+    cb++;
+    document.querySelector(".catBannerTrack").style.transform =
+        `translateX(-${cb*100}%)`;
+
+    if(cb >= totalCB-1){
+        setTimeout(()=>{
+            cb=0;
+            document.querySelector(".catBannerTrack").style.transform = `translateX(0%)`;
+        },600);
+    }
+},5000);

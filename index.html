@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon Clone - Manjar</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
     <nav class="navbar">
-        <div class="logo">Amazon</div>
 
+        <!-- AMAZON LOGO -->
+        <div id="nav-logo-sprites"></div>
+
+        <!-- THREE DOT SIDEBAR BUTTON -->
+        <div id="sideMenuBtn"><i class="fas fa-ellipsis-v"></i></div>
+
+        <!-- MAIN NAV LINKS -->
         <ul class="nav-links" id="navLinks">
             <li onclick="showCategory('all-product')">All Products</li>
             <li onclick="showCategory('men')">Men</li>
@@ -22,125 +32,289 @@
             <li onclick="showCategory('electronics')">Electronics</li>
         </ul>
 
+        <!-- SEARCH -->
         <div class="searchBox">
             <input type="text" id="search" placeholder="Search..." onkeyup="searchProducts()">
             <button>🔍</button>
         </div>
 
-        <button class="signinBtn" onclick="openLogin()">Sign In</button>
+        <!-- SIGN-IN -->
+        <button class="signinBtn" id="loginBtn" onclick="openLogin()">Sign In</button>
+        <div id="welcomeUser" class="welcomeUser" style="display:none;"></div>
 
-        <div class="cart" onclick="openCart()">🛒 <span id="cartCount">0</span></div>
+        <!-- CART -->
+        <div class="cart" id="cartIcon" onclick="openCart()" style="display:none;">
+            🛒 <span id="cartCount">0</span>
+        </div>
 
-        <!-- Hamburger -->
+        <!-- MOBILE MENU -->
         <div class="menuBtn" onclick="toggleMenu()">☰</div>
     </nav>
 
 
-    <!-- PRODUCT SECTION -->
-    <section id="products" class="products"></section>
+   <section id="categoryBanner">
+    <div class="catBannerTrack">
+
+        <div class="catBannerSlide" data-color="rgba(14,40,82,0.65)" data-text="#7ab3ff"
+            style="--img:url('https://tse3.mm.bing.net/th?id=OIP.QP0NrRWnGOy7KdQooypRPAHaLH&pid=Api')">
+            <h1>MEN COLLECTION</h1>
+            <p>Jackets • Jeans • T-Shirts • Winter Wear</p>
+            <span class="discount">45% OFF</span>
+        </div>
+
+        <div class="catBannerSlide" data-color="rgba(120,10,60,0.65)" data-text="#ff78c5"
+            style="--img:url('https://tse1.mm.bing.net/th?id=OIP.D2Lj6Vg8ThnVfL41dY1YbgHaLH&pid=Api')">
+            <h1>WOMEN FASHION</h1>
+            <p>Tops • Saree • Crocs • Accessories</p>
+            <span class="discount">60% OFF</span>
+        </div>
+
+        <div class="catBannerSlide" data-color="rgba(19,63,9,0.65)" data-text="#7dfc6b"
+            style="--img:url('https://tse2.mm.bing.net/th?id=OIP.LJW8YAtHuZtk8qj5mXrjVwHaLH&pid=Api')">
+            <h1>KIDS SPECIAL</h1>
+            <p>Daily Wear • Sports • Soft Fabric</p>
+            <span class="discount">40% OFF</span>
+        </div>
+
+        <div class="catBannerSlide" data-color="rgba(0,0,0,0.65)" data-text="#49ffea"
+            style="--img:url('https://tse3.mm.bing.net/th?id=OIP.2TDDcdUaMXiaQICj4lc00wHaHa&pid=Api')">
+            <h1>ELECTRONICS DEALS</h1>
+            <p>Mobile • Laptop • Earbuds • Gaming</p>
+            <span class="discount">50% OFF</span>
+        </div>
+
+    </div>
+</section>
 
 
-    <!-- POPUP FULL DETAILS -->
+
+
+
+
+
+
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside id="sidebar">
+        <div class="side-header">
+            <h3>Categories</h3>
+            <span onclick="closeSidebar()">✖</span>
+        </div>
+
+        <div class="sideSection">
+            <h4>Men</h4>
+            <p onclick="showSubCat('men','shirt')">Shirt</p>
+            <p onclick="showSubCat('men','jeans')">Jeans</p>
+            <p onclick="showSubCat('men','kurta')">Kurta</p>
+            <p onclick="showSubCat('men','shoes')">Shoes</p>
+            <p onclick="showSubCat('men','watch')">Watch</p>
+            <p onclick="showSubCat('men','jacket')">Jacket</p>
+            <p onclick="showSubCat('men','lower')">Lower</p>
+        </div>
+
+        <div class="sideSection">
+            <h4>Women</h4>
+            <p onclick="showSubCat('women','tops')">Tops</p>
+            <p onclick="showSubCat('women','saree')">Saree</p>
+            <p onclick="showSubCat('women','jeans')">Jeans</p>
+            <p onclick="showSubCat('women','kurta')">Kurta</p>
+            <p onclick="showSubCat('women','shoes')">Shoes</p>
+            <p onclick="showSubCat('women','crocs')">Crocs</p>
+            <p onclick="showSubCat('women','watch')">Watch</p>
+            <p onclick="showSubCat('women','jacket')">Jacket</p>
+        </div>
+
+        <div class="sideSection">
+            <h4>Kids</h4>
+            <p onclick="showSubCat('kids','jeans')">Jeans</p>
+            <p onclick="showSubCat('kids','kurta')">Kurta</p>
+            <p onclick="showSubCat('kids','shoes')">Shoes</p>
+            <p onclick="showSubCat('kids','watch')">Watch</p>
+            <p onclick="showSubCat('kids','jacket')">Jacket</p>
+        </div>
+
+        <div class="sideSection">
+            <h4>Electronics</h4>
+            <p onclick="showSubCat('electronics','android')">Android Phone</p>
+            <p onclick="showSubCat('electronics','iphone')">iPhone</p>
+            <p onclick="showSubCat('electronics','laptop')">Laptop</p>
+            <p onclick="showSubCat('electronics','headphone')">Headphone</p>
+        </div>
+    </aside>
+
+
+    <!-- ================= PRODUCTS ================= -->
+    <section id="products" class="products" style="display:none;"></section>
+
+
+    <!-- ================= POPUP PRODUCT ================= -->
     <div id="productPopup" class="fullPopup">
         <div class="popupContainer">
             <span class="popupClose" onclick="closeProduct()">✖</span>
             <img id="popupImg">
             <h2 id="popupTitle"></h2>
             <h3 id="popupPrice"></h3>
-            <p id="popupDesc">High quality premium product from Amazon Clone Collection.</p>
+            <p id="popupDesc">Premium Amazon Clone Product Quality</p>
+
+            <label>Size:</label>
+            <select id="sizeSelect">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+
             <button onclick="addToCartPopup()" class="addBtn">Add to Cart</button>
         </div>
     </div>
 
 
-    <!-- SIGN-IN FULL PAGE -->
+    <!-- ================= SIGN-IN FORM ================= -->
     <div id="loginPopup" class="loginFull">
         <div class="loginBoxFull">
             <span class="closeLogin" onclick="closeLogin()">✖</span>
             <h1>Register / Sign In</h1>
 
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email">
-            <input type="tel" placeholder="Phone Number">
-            <input type="password" placeholder="Password">
+            <input type="text" id="nameInput" placeholder="Full Name">
+            <input type="email" id="emailInput" placeholder="Email">
+            <input type="password" id="passInput" placeholder="Password">
+            <input type="tel" id="phoneInput" placeholder="Phone Number">
 
-            <select>
-                <option>Country</option>
-                <option>India</option>
-                <option>USA</option>
-                <option>UK</option>
-                <option>UAE</option>
-                <option>Canada</option>
-                <option>America</option>
-                <option>Nepaal</option>
+            <select id="genderInput">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
             </select>
 
-            <div class="gender">
-                <label><input type="radio" name="g"> Male</label>
-                <label><input type="radio" name="g"> Female</label>
-                <label><input type="radio" name="g"> Other</label>
-            </div>
+            <select id="countryInput">
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="UAE">UAE</option>
+                <option value="Canada">Canada</option>
+                <option value="Nepal">Nepal</option>
+            </select>
 
-            <button class="loginBtn">Continue</button>
+            <button onclick="doLogin()" class="loginBtn">Continue</button>
+
+            <button type="button" class="forgotBtn" onclick="forgotPass()">Forgot Account?</button>
+            <div id="newAccountForm" style="display:none; margin-top:10px;">
+                <input type="text" id="newName" placeholder="New Name">
+                <input type="email" id="newEmail" placeholder="New Email">
+                <input type="password" id="newPass" placeholder="New Password">
+                <button type="button" onclick="saveNewUser()" class="resetBtn">Save Account</button>
+            </div>
         </div>
     </div>
 
 
-    <!-- CART -->
-    <div id="cartModal" class="cartModal">
-        <div class="cartContent">
+    <!-- ================= CART PAGE ================= -->
+    <div id="cartPage" class="cartPage">
+        <div class="cartContainer">
             <h2>Your Cart</h2>
-            <ul id="cartItems"></ul>
-            <button onclick="closeCart()">Close</button>
+            <span class="closeCartX" onclick="closeCartPage()">✖</span>
+            <div id="cartList"></div>
+            <div class="cartTotal">
+                <p>Total: ₹<span id="cartTotal">0</span></p>
+                <button onclick="goCheckout()" class="buyBtn">Proceed to Buy</button>
+            </div>
         </div>
     </div>
 
 
-    <!-- PREMIUM FOOTER -->
-    <footer class="footer">
-        <div class="footerCols">
+    <!-- ================= CHECKOUT PAGE ================= -->
+    <div id="checkoutPage">
+        <h2>Delivery Address</h2>
+        <input type="text" id="addr_name" placeholder="Full Name">
+        <input type="text" id="addr_phone" placeholder="Phone Number">
+        <input type="text" id="addr_house" placeholder="House / Flat No">
+        <input type="text" id="addr_area" placeholder="Area / Road / Colony">
+        <input type="text" id="addr_city" placeholder="City">
+        <input type="number" id="addr_pin" placeholder="Pincode">
+        <input type="text" id="addr_state" placeholder="State">
 
-            <div>
-                <h3>Company</h3>
-                <p>Amazon Clone Pvt Ltd</p>
-                <p>Since 2026</p>
-                <p>Founder: Manjar</p>
-                <p>India - Delhi</p>
-            </div>
+        <button onclick="goPayment()" class="buyBtn">Continue to Payment</button>
+        <button onclick="closeCheckout()" class="closeBtn">Cancel</button>
+    </div>
 
-            <div>
-                <h3>Contact</h3>
-                <p>📩 Email: support@amazonclone.com</p>
-                <p>📞 Phone: +91 8252486411</p>
-                <p>🌍 Country: Okhla, Zakir Nagar, Delhi,India</p>
-            </div>
 
-            <div>
-                <h3>Social Links</h3>
-                <div class="socialLinks">
-                    <a href="https://www.instagram.com/sr.manzaralam?igsh=MWt1bzIyMmFsYWtycw==" target="_blank"
-                        class="icon insta">📸</a>
-                    <a href="#" target="_blank" class="icon fb">📘</a>
-                    <a href="#" target="_blank" class="icon tw">🐦</a>
-                    <a href="#" target="_blank" class="icon li">💼</a>
-                </div>
-                <p class="socialNote">* Click icons to add your social links *</p>
-            </div>
+    <!-- ================= PAYMENT PAGE ================= -->
+    <div id="paymentPage">
+        <h2>Payment Method</h2>
+        <label><input type="radio" name="pay" value="upi"> UPI (PhonePe / Paytm / GPay)</label>
+        <label><input type="radio" name="pay" value="card"> Credit / Debit Card</label>
+        <label><input type="radio" name="pay" value="cod"> Cash On Delivery</label>
 
-            <div>
-                <h3>Ratings & Reviews</h3>
-                <p>⭐ 4.9 / 5.0</p>
-                <p>10,000+ Happy Customers</p>
-                <p>Premium Quality & Fast Delivery</p>
-            </div>
-
+        <div id="upiBox">
+            <h3>Choose UPI App</h3>
+            <button onclick="payUPI('phonepe')">PhonePe</button>
+            <button onclick="payUPI('paytm')">Paytm</button>
+            <button onclick="payUPI('gpay')">Google Pay</button>
         </div>
 
-        <p class="copy">© 2026 Amazon Clone - Designed by Manjar</p>
+        <button onclick="confirmOrder()" class="buyBtn">Confirm Order</button>
+    </div>
+
+
+    <!-- ================= RETURN PAGE ================= -->
+    <div id="returnPage">
+        <h2>Return Request</h2>
+        <input type="text" placeholder="Order ID">
+        <input type="text" placeholder="Reason">
+        <button class="buyBtn">Submit Return</button>
+        <button onclick="closeReturn()" class="closeBtn">Close</button>
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footerContainer">
+
+            <div class="footerCol">
+                <h3>Company</h3>
+                <p><strong>Name:</strong> Amazon Clone Pvt Ltd</p>
+                <p><strong>Founded:</strong> 2026</p>
+                <p><strong>Location:</strong> Delhi, India</p>
+                <p><strong>Employees:</strong> 240+</p>
+                <p><strong>Industry:</strong> E-Commerce & Software</p>
+            </div>
+
+            <div class="footerCol">
+                <h3>CEO & Founder</h3>
+                <p><strong>Name:</strong> Manjar Alam</p>
+                <p><strong>Experience:</strong> 7+ Years</p>
+                <p><strong>Phone:</strong> +91 82524 86411</p>
+                <p><strong>Email:</strong> ceo@amazonclone.com</p>
+            </div>
+
+            <div class="footerCol">
+                <h3>Support</h3>
+                <p><strong>Helpline:</strong> 1800-300-900</p>
+                <p><strong>WhatsApp:</strong> +91 92000 88977</p>
+                <p><strong>Email:</strong> support@amazonclone.com</p>
+            </div>
+
+            <div class="footerCol">
+                <h3>Social Media</h3>
+                <a class="sIcon insta" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="sIcon fb" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="sIcon li" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="sIcon wa" href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="footerBottomHigh">
+            © 2026 Amazon Clone Pvt Ltd — Designed & Built by <strong>Manjar</strong>
+        </div>
     </footer>
 
 
+    <!-- SCRIPT -->
+    <script src="data.js"></script>
     <script src="script.js"></script>
-</body>
 
+</body>
 </html>
