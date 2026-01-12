@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,10 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Icons -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -21,9 +26,12 @@
         <div id="nav-logo-sprites"></div>
 
         <!-- THREE DOT SIDEBAR BUTTON -->
-        <div id="sideMenuBtn"><i class="fas fa-ellipsis-v"></i></div>
+        <!-- <div id="sideMenuBtn"><i class="fas fa-ellipsis-v"></i></div> -->
+        <div id="sideMenuBtn" class="catMenuBtn"><i class="fas fa-bars"></i></div>
 
         <!-- MAIN NAV LINKS -->
+
+
         <ul class="nav-links" id="navLinks">
             <li onclick="showCategory('all-product')">All Products</li>
             <li onclick="showCategory('men')">Men</li>
@@ -42,6 +50,11 @@
         <button class="signinBtn" id="loginBtn" onclick="openLogin()">Sign In</button>
         <div id="welcomeUser" class="welcomeUser" style="display:none;"></div>
 
+
+
+        
+
+
         <!-- CART -->
         <div class="cart" id="cartIcon" onclick="openCart()" style="display:none;">
             🛒 <span id="cartCount">0</span>
@@ -52,44 +65,40 @@
     </nav>
 
 
-   <section id="categoryBanner">
-    <div class="catBannerTrack">
 
-        <div class="catBannerSlide" data-color="rgba(14,40,82,0.65)" data-text="#7ab3ff"
-            style="--img:url('https://tse3.mm.bing.net/th?id=OIP.QP0NrRWnGOy7KdQooypRPAHaLH&pid=Api')">
-            <h1>MEN COLLECTION</h1>
-            <p>Jackets • Jeans • T-Shirts • Winter Wear</p>
-            <span class="discount">45% OFF</span>
+    <!-- 🔥 MAIN BANNER WRAPPER -->
+    <div id="bigBanner">
+        <div class="bigBannerTrack">
+            <div class="bigSlide"
+                style="--img:url('https://marketplace.canva.com/EAFVHstxnwk/1/0/800w/canva-beige-aesthetic-exclusive-fashion-wear-collection-clothing-banner-yv-HRWs1aMc.jpg')">
+            </div>
+            <div class="bigSlide"
+                style="--img:url('https://marketplace.canva.com/EAFEH3mIUaM/1/0/1600w/canva-dark-grey-and-white-minimalist-new-fashion-collection-banner-nvaqxg-8iXI.jpg')">
+            </div>
+            <div class="bigSlide"
+                style="--img:url('https://cdnb.artstation.com/p/assets/images/images/043/916/283/large/neeraj-kumar-watch-banner.jpg?1638602434')">
+            </div>
+            <div class="bigSlide"
+                style="--img:url('https://miro.medium.com/v2/resize:fit:1195/0*cnt04xA7xrZPyJlr.png')"></div>
+            <div class="bigSlide"
+                style="--img:url('https://m.media-amazon.com/images/S/aplus-media-library-service-media/ae43faad-c006-4f4b-a377-be5e631d3574.__CR0,0,1464,600_PT0_SX1464_V1___.png')">
+            </div>
+            <div class="bigSlide"
+                style="--img:url('https://img.freepik.com/premium-psd/trend-fashion-banner-template-premium-psd_641545-41.jpg?w=2000')">
+            </div>
+            <div class="bigSlide"
+                style="--img:url('https://1ststep.pk/cdn/shop/collections/2000px_x_600px_Women.webp?v=1705065641&width=2000')">
+            </div>
+            <div class="bigSlide"
+                style="--img:url('https://st-gdx.dancf.com/gaodingx/0/uxms/design/20210122-101837-cf22.png')"></div>
+            <div class="bigSlide"
+                style="--img:url('https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/02/amazon-electronic-mega-sale-1707723302.jpg')">
+            </div>
+            <div class="bigSlide"
+                style="--img:url('https://images-fe.ssl-images-amazon.com/images/G/09/AmazonRenewed/en_renewed_banner.gif')">
+            </div>
         </div>
-
-        <div class="catBannerSlide" data-color="rgba(120,10,60,0.65)" data-text="#ff78c5"
-            style="--img:url('https://tse1.mm.bing.net/th?id=OIP.D2Lj6Vg8ThnVfL41dY1YbgHaLH&pid=Api')">
-            <h1>WOMEN FASHION</h1>
-            <p>Tops • Saree • Crocs • Accessories</p>
-            <span class="discount">60% OFF</span>
-        </div>
-
-        <div class="catBannerSlide" data-color="rgba(19,63,9,0.65)" data-text="#7dfc6b"
-            style="--img:url('https://tse2.mm.bing.net/th?id=OIP.LJW8YAtHuZtk8qj5mXrjVwHaLH&pid=Api')">
-            <h1>KIDS SPECIAL</h1>
-            <p>Daily Wear • Sports • Soft Fabric</p>
-            <span class="discount">40% OFF</span>
-        </div>
-
-        <div class="catBannerSlide" data-color="rgba(0,0,0,0.65)" data-text="#49ffea"
-            style="--img:url('https://tse3.mm.bing.net/th?id=OIP.2TDDcdUaMXiaQICj4lc00wHaHa&pid=Api')">
-            <h1>ELECTRONICS DEALS</h1>
-            <p>Mobile • Laptop • Earbuds • Gaming</p>
-            <span class="discount">50% OFF</span>
-        </div>
-
     </div>
-</section>
-
-
-
-
-
 
 
 
@@ -145,6 +154,12 @@
 
     <!-- ================= PRODUCTS ================= -->
     <section id="products" class="products" style="display:none;"></section>
+
+    <div id="loadMoreWrap">
+        <button id="loadMoreBtn" class="loadMoreBtn">Load More</button>
+    </div>
+
+
 
 
     <!-- ================= POPUP PRODUCT ================= -->
@@ -299,10 +314,14 @@
 
             <div class="footerCol">
                 <h3>Social Media</h3>
-                <a class="sIcon insta" href="#"><i class="fab fa-instagram"></i></a>
-                <a class="sIcon fb" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="sIcon li" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="sIcon wa" href="#"><i class="fab fa-whatsapp"></i></a>
+                <a class="sIcon insta" href="https://www.instagram.com/sr.manzaralam?igsh=MWt1bzIyMmFsYWtycw=="><i
+                        class="fab fa-instagram"></i></a>
+                <a class="sIcon fb" href="https://www.facebook.com/share/1DGyzNfq6v/"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="sIcon li"
+                    href="https://www.linkedin.com/in/manjar-alam-a78001301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="sIcon wa" href="https://wa.me/918252486411"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
 
@@ -317,4 +336,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>

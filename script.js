@@ -882,7 +882,28 @@ function showCategory(cat){
     document.body.className="";
     document.body.classList.add(`page-${cat}`);
     render();
+if(currentCat === "all-product"){
+  loadMoreWrap.style.display = "flex";
+} else {
+  loadMoreWrap.style.display = "none";
 }
+   
+};
+
+
+
+
+
+
+
+
+
+if(currentCat === "all-product"){
+    document.getElementById("loadMoreWrap").style.display = "flex";
+} else {
+    document.getElementById("loadMoreWrap").style.display = "none";
+}
+
 
 /* ============================
    SEARCH (HYBRID + STRONG)
@@ -1101,9 +1122,25 @@ function unlockDashboard(){
     document.getElementById("cartIcon").style.display="block";
     document.getElementById("loginBtn").style.display="none";
     document.getElementById("welcomeUser").style.display="block";
-    document.getElementById("welcomeUser").innerText=
-    "WELCOME "+user.name.toUpperCase();
+    // document.getElementById("welcomeUser").innerText=
+    // "Profile  "
+    // +user.name.toUpperCase();
+    document.getElementById("welcomeUser").innerHTML = `
+    <i class="fa-solid fa-user"></i> <span>Profile</span>
+`;
 }
+
+
+// unlockDashboard();
+// document.getElementById("loginBtn").style.display = "none";
+// document.getElementById("welcomeUser").style.display = "none";
+
+// document.getElementById("profileBox").style.display = "flex";
+// document.getElementById("profileName").innerText = user.name;
+
+
+
+
 
 /* ============================
    SIDEBAR
@@ -1119,97 +1156,38 @@ function showSubCat(cat,sub){
     alert(cat+" → "+sub);
 }
 
-/* ============================
-   BANNER AUTO SLIDE
-============================ */
-let slideIndex=0;
-setInterval(()=>{
-    slideIndex++;
-    document.getElementById("bannerSlider").style.transform=
-    `translateX(-${slideIndex*100}%)`;
-    if(slideIndex>=4) slideIndex=0;
-},5000);
-
-// /* ============================
-//    FORCE LOGIN FIRST TIME
-// ============================ */
-openLogin();
-render();
-updateCart();
-showCategory("men");
 
 
-
-
-
-/* HERO BANNER AUTO SLIDER */
-// let hero = document.querySelector("#heroBanner");
-// let slides = document.querySelectorAll("#heroBanner .bannerSlide");
-// let hIndex = 0;
-
-// setInterval(()=>{
-//     hIndex++;
-//     hero.style.transform = `translateX(-${hIndex*100}%)`;
-//     if(hIndex >= slides.length-1){
-//         setTimeout(()=>{
-//             hIndex = 0;
-//             hero.style.transform = `translateX(0%)`;
-//         },500);
-//     }
-// },5000);
-
-
-
-/* HERO BANNER AUTO SLIDER */
-let hero = document.querySelector("#heroBanner");
-let slides = document.querySelectorAll("#heroBanner .bannerSlide");
-let hIndex = 0;
+let slideB = 0;
+const totalSlidesB = document.querySelectorAll(".bigSlide").length;
 
 setInterval(()=>{
-    hIndex++;
-    hero.style.transform = `translateX(-${hIndex*100}%)`;
-    if(hIndex >= slides.length-1){
+    slideB++;
+    document.querySelector(".bigBannerTrack").style.transform =
+        `translateX(-${slideB * (100/totalSlidesB)}%)`;
+
+    if(slideB >= totalSlidesB - 1){
         setTimeout(()=>{
-            hIndex = 0;
-            hero.style.transform = `translateX(0%)`;
-        },500);
+            slideB = 0;
+            document.querySelector(".bigBannerTrack").style.transform =
+                `translateX(0%)`;
+        },800);
     }
-},5000);
+}, 20000); // 10 seconds
 
 
 
 
-
-/* =============== CATEGORY BANNER AUTO SLIDE =============== */
-let cbIndex = 0;
-function slideCategoryBanner(){
-    cbIndex++;
-    document.querySelector(".catBannerTrack").style.transform =
-        `translateX(-${cbIndex*100}%)`;
-    if(cbIndex >= 3){
-        setTimeout(()=>{
-            cbIndex = 0;
-            document.querySelector(".catBannerTrack").style.transform = `translateX(0%)`;
-        },600);
-    }
-}
-setInterval(slideCategoryBanner,5000);
+loadMoreBtn.onclick = ()=>{
+  limit += 40;
+  render();
+};
 
 
 
+document.getElementById("profileBox").onclick = () => {
+    let m = document.getElementById("profileMenu");
+    m.style.display = (m.style.display === "block") ? "none" : "block";
+};
 
-let cb = 0;
-let totalCB = document.querySelectorAll(".catBannerSlide").length;
 
-setInterval(()=>{
-    cb++;
-    document.querySelector(".catBannerTrack").style.transform =
-        `translateX(-${cb*100}%)`;
-
-    if(cb >= totalCB-1){
-        setTimeout(()=>{
-            cb=0;
-            document.querySelector(".catBannerTrack").style.transform = `translateX(0%)`;
-        },600);
-    }
-},5000);
