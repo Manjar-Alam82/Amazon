@@ -1033,6 +1033,8 @@ function goPayment(){
     document.getElementById("checkoutPage").style.display="none";
     document.getElementById("paymentPage").style.display="block";
 }
+setTimeout(()=>window.scrollTo({top:0,behavior:"smooth"}),100);
+
 
 /* ============================
    PAYMENT + UPI
@@ -1191,3 +1193,39 @@ document.getElementById("profileBox").onclick = () => {
 };
 
 
+function openPayment() {
+    document.getElementById("checkoutPage").style.display="none";
+    document.getElementById("paymentPage").style.display="block";
+}
+
+function closePayment() {
+    document.getElementById("paymentPage").style.display="none";
+}
+
+document.querySelectorAll('input[name="pay"]').forEach(r=>{
+    r.onclick = ()=>{
+        let type = r.value;
+        let box = document.getElementById("paymentDetails");
+
+        if(type==="upi"){
+            box.innerHTML = `
+                <input class="payInput" placeholder="Enter UPI ID (xxx@ybl)">
+            `;
+        }
+        if(type==="card"){
+            box.innerHTML = `
+                <input class="payInput" placeholder="Card Number">
+                <input class="payInput" placeholder="Expiry (MM/YY)">
+                <input class="payInput" placeholder="CVV">
+            `;
+        }
+        if(type==="cod"){
+            box.innerHTML = `<p style="padding:8px 0;">Pay when product arrives 👍</p>`;
+        }
+    };
+});
+
+function confirmOrder() {
+    alert("Order Placed Successfully 🎉");
+    closePayment();
+}

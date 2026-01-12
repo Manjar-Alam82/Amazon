@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Icons -->
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -52,7 +49,7 @@
 
 
 
-        
+
 
 
         <!-- CART -->
@@ -241,7 +238,7 @@
 
 
     <!-- ================= CHECKOUT PAGE ================= -->
-    <div id="checkoutPage">
+    <!-- <div id="checkoutPage">
         <h2>Delivery Address</h2>
         <input type="text" id="addr_name" placeholder="Full Name">
         <input type="text" id="addr_phone" placeholder="Phone Number">
@@ -253,8 +250,113 @@
 
         <button onclick="goPayment()" class="buyBtn">Continue to Payment</button>
         <button onclick="closeCheckout()" class="closeBtn">Cancel</button>
+    </div> -->
+    <!--  -->
+    <!-- <div id="checkoutPage">
+    <div id="checkoutWrapper">
+
+         LEFT — RETURN FORM -->
+    <!-- <div class="checkoutReturnBox">
+            <h2>Return Request</h2>
+
+            <input type="text" placeholder="Order ID">
+            <input type="text" placeholder="Reason">
+            <textarea placeholder="Additional details (optional)"></textarea>
+
+            <button class="returnBtn">Submit Return</button>
+        </div> -->
+
+    <!-- RIGHT — BUY FORM -->
+    <!-- <div class="checkoutBuyBox">
+            <h2>Delivery Details</h2>
+
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Phone Number">
+            <input type="text" placeholder="House / Flat No">
+            <input type="text" placeholder="Area / Road / Colony">
+            <input type="text" placeholder="City">
+            <input type="number" placeholder="Pincode">
+            <input type="text" placeholder="State">
+
+            <select>
+                <option>Select Payment</option>
+                <option>UPI</option>
+                <option>Card</option>
+                <option>Cash on Delivery</option>
+            </select>
+
+            <button class="buyNowBtn">Confirm Order</button>
+            <button class="closeCheckoutBtn" onclick="closeCheckout()">Cancel</button>
+        </div>
+    </div>
+</div>  -->
+    <!--  -->
+
+    <!-- ================= CHECKOUT PAGE ================= -->
+    <div id="checkoutPage">
+        <div id="checkoutWrapper">
+
+            <!-- LEFT — RETURN FORM -->
+            <div class="checkoutReturnBox">
+                <h2>Return Request</h2>
+
+                <input type="text" placeholder="Order ID">
+                <input type="text" placeholder="Reason">
+                <textarea placeholder="Additional details (optional)"></textarea>
+
+                <button class="returnBtn">Submit Return</button>
+            </div>
+
+            <!-- RIGHT — BUY FORM -->
+            <div class="checkoutBuyBox">
+                <h2>Delivery Details</h2>
+
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Phone Number">
+                <input type="text" placeholder="House / Flat No">
+                <input type="text" placeholder="Area / Road / Colony">
+                <input type="text" placeholder="City">
+                <input type="number" placeholder="Pincode">
+                <input type="text" placeholder="State">
+
+                <button class="buyNowBtn" onclick="openPayment()">Confirm & Continue</button>
+                <button class="closeCheckoutBtn" onclick="closeCheckout()">Cancel</button>
+            </div>
+        </div>
     </div>
 
+
+    <!-- ================= PAYMENT PAGE ================= -->
+    <div id="paymentPage">
+        <div class="paymentWrapper">
+
+            <h2>Select Payment Method</h2>
+
+            <label class="payOption">
+                <input type="radio" name="pay" value="upi">
+                <span>UPI (PhonePe / Paytm / GPay)</span>
+            </label>
+
+            <label class="payOption">
+                <input type="radio" name="pay" value="card">
+                <span>Credit / Debit Card</span>
+            </label>
+
+            <label class="payOption">
+                <input type="radio" name="pay" value="cod">
+                <span>Cash On Delivery (COD)</span>
+            </label>
+
+            <!-- BOX FOR INPUT -->
+            <div id="paymentDetails"></div>
+
+            <div class="payBtnGroup">
+                <button class="payConfirmBtn" onclick="confirmOrder()">Confirm Payment</button>
+                <button class="payCancelBtn" onclick="closePayment()">Cancel</button>
+            </div>
+
+        </div>
+    </div>
 
     <!-- ================= PAYMENT PAGE ================= -->
     <div id="paymentPage">
