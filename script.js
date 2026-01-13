@@ -839,34 +839,34 @@ let popupItem = null;
 /* ============================
    CATEGORY + RENDER SYSTEM
 ============================ */
-function render(){
+function render() {
     const box = document.getElementById("products");
     box.innerHTML = "";
 
     let list = [];
 
-    if(currentCat === "all-product"){
-        let men = data.men.map((p,i)=>({...p,cat:"men",idx:i}));
-        let women = data.women.map((p,i)=>({...p,cat:"women",idx:i}));
-        let kids = data.kids.map((p,i)=>({...p,cat:"kids",idx:i}));
-        let electronics = data.electronics.map((p,i)=>({...p,cat:"electronics",idx:i}));
+    if (currentCat === "all-product") {
+        let men = data.men.map((p, i) => ({ ...p, cat: "men", idx: i }));
+        let women = data.women.map((p, i) => ({ ...p, cat: "women", idx: i }));
+        let kids = data.kids.map((p, i) => ({ ...p, cat: "kids", idx: i }));
+        let electronics = data.electronics.map((p, i) => ({ ...p, cat: "electronics", idx: i }));
 
-        let max = Math.max(men.length,women.length,kids.length,electronics.length);
+        let max = Math.max(men.length, women.length, kids.length, electronics.length);
 
-        for(let i=0;i<max;i++){
-            if(men[i]) list.push(men[i]);
-            if(women[i]) list.push(women[i]);
-            if(kids[i]) list.push(kids[i]);
-            if(electronics[i]) list.push(electronics[i]);
+        for (let i = 0; i < max; i++) {
+            if (men[i]) list.push(men[i]);
+            if (women[i]) list.push(women[i]);
+            if (kids[i]) list.push(kids[i]);
+            if (electronics[i]) list.push(electronics[i]);
         }
 
-        list = list.slice(0,limit);
-    } 
+        list = list.slice(0, limit);
+    }
     else {
-        list = data[currentCat].map((p,i)=>({...p,cat:currentCat,idx:i}));
+        list = data[currentCat].map((p, i) => ({ ...p, cat: currentCat, idx: i }));
     }
 
-    list.forEach(p=>{
+    list.forEach(p => {
         box.innerHTML += `
         <div class="card" onclick="openProduct('${p.cat}',${p.idx})">
             <img src="${p.img}">
@@ -876,18 +876,18 @@ function render(){
     });
 }
 
-function showCategory(cat){
+function showCategory(cat) {
     currentCat = cat;
     limit = 60;
-    document.body.className="";
+    document.body.className = "";
     document.body.classList.add(`page-${cat}`);
     render();
-if(currentCat === "all-product"){
-  loadMoreWrap.style.display = "flex";
-} else {
-  loadMoreWrap.style.display = "none";
-}
-   
+    if (currentCat === "all-product") {
+        loadMoreWrap.style.display = "flex";
+    } else {
+        loadMoreWrap.style.display = "none";
+    }
+
 };
 
 
@@ -898,7 +898,7 @@ if(currentCat === "all-product"){
 
 
 
-if(currentCat === "all-product"){
+if (currentCat === "all-product") {
     document.getElementById("loadMoreWrap").style.display = "flex";
 } else {
     document.getElementById("loadMoreWrap").style.display = "none";
@@ -908,95 +908,95 @@ if(currentCat === "all-product"){
 /* ============================
    SEARCH (HYBRID + STRONG)
 ============================ */
-function searchProducts(){
+function searchProducts() {
     const q = document.getElementById("search").value.toLowerCase().trim();
     const box = document.getElementById("products");
     box.innerHTML = "";
 
-    let base = currentCat==="all-product"
-    ? [
-        ...data.men.map((p,i)=>({...p,cat:"men",idx:i})),
-        ...data.women.map((p,i)=>({...p,cat:"women",idx:i})),
-        ...data.kids.map((p,i)=>({...p,cat:"kids",idx:i})),
-        ...data.electronics.map((p,i)=>({...p,cat:"electronics",idx:i}))
-    ]
-    : data[currentCat].map((p,i)=>({...p,cat:currentCat,idx:i}));
+    let base = currentCat === "all-product"
+        ? [
+            ...data.men.map((p, i) => ({ ...p, cat: "men", idx: i })),
+            ...data.women.map((p, i) => ({ ...p, cat: "women", idx: i })),
+            ...data.kids.map((p, i) => ({ ...p, cat: "kids", idx: i })),
+            ...data.electronics.map((p, i) => ({ ...p, cat: "electronics", idx: i }))
+        ]
+        : data[currentCat].map((p, i) => ({ ...p, cat: currentCat, idx: i }));
 
-    if(!q){ render(); return; }
+    if (!q) { render(); return; }
 
-    function score(t){
-        t=t.toLowerCase();
-        if(t===q) return 1;
-        if(t.startsWith(q)) return 0.9;
-        if(t.includes(q)) return 0.8;
-        let m=0;
-        for(let i=0;i<Math.min(t.length,q.length);i++){
-            if(t[i]===q[i]) m++;
+    function score(t) {
+        t = t.toLowerCase();
+        if (t === q) return 1;
+        if (t.startsWith(q)) return 0.9;
+        if (t.includes(q)) return 0.8;
+        let m = 0;
+        for (let i = 0; i < Math.min(t.length, q.length); i++) {
+            if (t[i] === q[i]) m++;
         }
-        return m/t.length;
+        return m / t.length;
     }
 
-    base.map(p=>({...p,s:score(p.title)}))
-    .filter(p=>p.s>0.25)
-    .sort((a,b)=>b.s-a.s)
-    .forEach(p=>{
-        box.innerHTML+=`
+    base.map(p => ({ ...p, s: score(p.title) }))
+        .filter(p => p.s > 0.25)
+        .sort((a, b) => b.s - a.s)
+        .forEach(p => {
+            box.innerHTML += `
         <div class="card" onclick="openProduct('${p.cat}',${p.idx})">
             <img src="${p.img}">
             <h4>${p.title}</h4>
             <p>₹${p.price}</p>
         </div>`;
-    });
+        });
 }
 
 /* ============================
    POPUP PRODUCT DETAILS
 ============================ */
-function openProduct(cat,i){
+function openProduct(cat, i) {
     popupItem = data[cat][i];
     document.getElementById("popupImg").src = popupItem.img;
     document.getElementById("popupTitle").innerText = popupItem.title;
-    document.getElementById("popupPrice").innerText = "₹"+popupItem.price;
-    document.getElementById("productPopup").style.display="flex";
+    document.getElementById("popupPrice").innerText = "₹" + popupItem.price;
+    document.getElementById("productPopup").style.display = "flex";
 }
-function closeProduct(){
-    document.getElementById("productPopup").style.display="none";
+function closeProduct() {
+    document.getElementById("productPopup").style.display = "none";
 }
 
 /* ============================
    ADD TO CART SYSTEM
 ============================ */
-function addToCartPopup(){
+function addToCartPopup() {
     let size = document.getElementById("sizeSelect").value;
-    cart.push({...popupItem,size});
-    localStorage.setItem("cart",JSON.stringify(cart));
+    cart.push({ ...popupItem, size });
+    localStorage.setItem("cart", JSON.stringify(cart));
     updateCart();
     closeProduct();
 }
 
-function updateCart(){
+function updateCart() {
     document.getElementById("cartCount").innerText = cart.length;
 }
 
 /* ============================
    CART PAGE
 ============================ */
-function openCart(){
-    document.getElementById("cartPage").style.display="flex";
+function openCart() {
+    document.getElementById("cartPage").style.display = "flex";
     renderCartPage();
 }
-function closeCartPage(){
-    document.getElementById("cartPage").style.display="none";
+function closeCartPage() {
+    document.getElementById("cartPage").style.display = "none";
 }
 
-function renderCartPage(){
+function renderCartPage() {
     const list = document.getElementById("cartList");
-    list.innerHTML="";
-    let total=0;
+    list.innerHTML = "";
+    let total = 0;
 
-    cart.forEach((c,i)=>{
-        total+=c.price;
-        list.innerHTML+=`
+    cart.forEach((c, i) => {
+        total += c.price;
+        list.innerHTML += `
         <div class="cartItem">
             <img src="${c.img}">
             <div>
@@ -1011,9 +1011,9 @@ function renderCartPage(){
     document.getElementById("cartTotal").innerText = total;
 }
 
-function removeCart(i){
-    cart.splice(i,1);
-    localStorage.setItem("cart",JSON.stringify(cart));
+function removeCart(i) {
+    cart.splice(i, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
     updateCart();
     renderCartPage();
 }
@@ -1021,72 +1021,72 @@ function removeCart(i){
 /* ============================
    CHECKOUT + ADDRESS
 ============================ */
-function goCheckout(){
+function goCheckout() {
     closeCartPage();
-    document.getElementById("checkoutPage").style.display="block";
+    document.getElementById("checkoutPage").style.display = "block";
 }
-function closeCheckout(){
-    document.getElementById("checkoutPage").style.display="none";
+function closeCheckout() {
+    document.getElementById("checkoutPage").style.display = "none";
 }
 
-function goPayment(){
-    document.getElementById("checkoutPage").style.display="none";
-    document.getElementById("paymentPage").style.display="block";
+function goPayment() {
+    document.getElementById("checkoutPage").style.display = "none";
+    document.getElementById("paymentPage").style.display = "block";
 }
-setTimeout(()=>window.scrollTo({top:0,behavior:"smooth"}),100);
+setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
 
 
 /* ============================
    PAYMENT + UPI
 ============================ */
-function payUPI(app){
-    alert("Redirecting to "+app+" UPI...");
+function payUPI(app) {
+    alert("Redirecting to " + app + " UPI...");
 }
 
-function confirmOrder(){
+function confirmOrder() {
     alert("Order Successful! Thank you for shopping.");
-    cart=[];
-    localStorage.setItem("cart",JSON.stringify(cart));
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
     updateCart();
-    document.getElementById("paymentPage").style.display="none";
+    document.getElementById("paymentPage").style.display = "none";
 }
 
 /* ============================
    RETURN SYSTEM
 ============================ */
-function closeReturn(){
-    document.getElementById("returnPage").style.display="none";
+function closeReturn() {
+    document.getElementById("returnPage").style.display = "none";
 }
 
 /* ============================
    LOGIN + REGISTER
 ============================ */
-function openLogin(){
-    document.getElementById("loginPopup").style.display="flex";
+function openLogin() {
+    document.getElementById("loginPopup").style.display = "flex";
 }
-function closeLogin(){
-    document.getElementById("loginPopup").style.display="none";
+function closeLogin() {
+    document.getElementById("loginPopup").style.display = "none";
 }
 
-function doLogin(){
-    let n=document.getElementById("nameInput").value.trim();
-    let e=document.getElementById("emailInput").value.trim();
-    let p=document.getElementById("passInput").value.trim();
+function doLogin() {
+    let n = document.getElementById("nameInput").value.trim();
+    let e = document.getElementById("emailInput").value.trim();
+    let p = document.getElementById("passInput").value.trim();
 
-    if(!n||!e||!p){
+    if (!n || !e || !p) {
         alert("Enter Name, Email & Password!");
         return;
     }
 
-    if(!user){
-        user={name:n,email:e,password:p};
-        localStorage.setItem("user",JSON.stringify(user));
+    if (!user) {
+        user = { name: n, email: e, password: p };
+        localStorage.setItem("user", JSON.stringify(user));
         alert("Account Created! Login Again");
         openLogin();
         return;
     }
 
-    if(user.name===n&&user.email===e&&user.password===p){
+    if (user.name === n && user.email === e && user.password === p) {
         unlockDashboard();
         closeLogin();
     } else {
@@ -1094,36 +1094,36 @@ function doLogin(){
     }
 }
 
-function forgotPass(){
-    document.getElementById("newAccountForm").style.display="block";
+function forgotPass() {
+    document.getElementById("newAccountForm").style.display = "block";
 }
 
-function saveNewUser(){
-    let n=document.getElementById("newName").value.trim();
-    let e=document.getElementById("newEmail").value.trim();
-    let p=document.getElementById("newPass").value.trim();
+function saveNewUser() {
+    let n = document.getElementById("newName").value.trim();
+    let e = document.getElementById("newEmail").value.trim();
+    let p = document.getElementById("newPass").value.trim();
 
-    if(!n||!e||!p){
+    if (!n || !e || !p) {
         alert("Fill all new account fields!");
         return;
     }
 
-    user={name:n,email:e,password:p};
-    localStorage.setItem("user",JSON.stringify(user));
+    user = { name: n, email: e, password: p };
+    localStorage.setItem("user", JSON.stringify(user));
 
     alert("New Account Saved! Login Again.");
-    document.getElementById("newAccountForm").style.display="none";
+    document.getElementById("newAccountForm").style.display = "none";
     openLogin();
 }
 
 /* ============================
    UNLOCK DASHBOARD
 ============================ */
-function unlockDashboard(){
-    document.getElementById("products").style.display="grid";
-    document.getElementById("cartIcon").style.display="block";
-    document.getElementById("loginBtn").style.display="none";
-    document.getElementById("welcomeUser").style.display="block";
+function unlockDashboard() {
+    document.getElementById("products").style.display = "grid";
+    document.getElementById("cartIcon").style.display = "block";
+    document.getElementById("loginBtn").style.display = "none";
+    document.getElementById("welcomeUser").style.display = "block";
     // document.getElementById("welcomeUser").innerText=
     // "Profile  "
     // +user.name.toUpperCase();
@@ -1147,15 +1147,15 @@ function unlockDashboard(){
 /* ============================
    SIDEBAR
 ============================ */
-document.getElementById("sideMenuBtn").onclick=()=>{
+document.getElementById("sideMenuBtn").onclick = () => {
     document.getElementById("sidebar").classList.add("show");
 }
-function closeSidebar(){
+function closeSidebar() {
     document.getElementById("sidebar").classList.remove("show");
 }
 
-function showSubCat(cat,sub){
-    alert(cat+" → "+sub);
+function showSubCat(cat, sub) {
+    alert(cat + " → " + sub);
 }
 
 
@@ -1163,26 +1163,26 @@ function showSubCat(cat,sub){
 let slideB = 0;
 const totalSlidesB = document.querySelectorAll(".bigSlide").length;
 
-setInterval(()=>{
+setInterval(() => {
     slideB++;
     document.querySelector(".bigBannerTrack").style.transform =
-        `translateX(-${slideB * (100/totalSlidesB)}%)`;
+        `translateX(-${slideB * (100 / totalSlidesB)}%)`;
 
-    if(slideB >= totalSlidesB - 1){
-        setTimeout(()=>{
+    if (slideB >= totalSlidesB - 1) {
+        setTimeout(() => {
             slideB = 0;
             document.querySelector(".bigBannerTrack").style.transform =
                 `translateX(0%)`;
-        },800);
+        }, 800);
     }
 }, 20000); // 10 seconds
 
 
 
 
-loadMoreBtn.onclick = ()=>{
-  limit += 40;
-  render();
+loadMoreBtn.onclick = () => {
+    limit += 40;
+    render();
 };
 
 
@@ -1194,32 +1194,32 @@ document.getElementById("profileBox").onclick = () => {
 
 
 function openPayment() {
-    document.getElementById("checkoutPage").style.display="none";
-    document.getElementById("paymentPage").style.display="block";
+    document.getElementById("checkoutPage").style.display = "none";
+    document.getElementById("paymentPage").style.display = "block";
 }
 
 function closePayment() {
-    document.getElementById("paymentPage").style.display="none";
+    document.getElementById("paymentPage").style.display = "none";
 }
 
-document.querySelectorAll('input[name="pay"]').forEach(r=>{
-    r.onclick = ()=>{
+document.querySelectorAll('input[name="pay"]').forEach(r => {
+    r.onclick = () => {
         let type = r.value;
         let box = document.getElementById("paymentDetails");
 
-        if(type==="upi"){
+        if (type === "upi") {
             box.innerHTML = `
                 <input class="payInput" placeholder="Enter UPI ID (xxx@ybl)">
             `;
         }
-        if(type==="card"){
+        if (type === "card") {
             box.innerHTML = `
                 <input class="payInput" placeholder="Card Number">
                 <input class="payInput" placeholder="Expiry (MM/YY)">
                 <input class="payInput" placeholder="CVV">
             `;
         }
-        if(type==="cod"){
+        if (type === "cod") {
             box.innerHTML = `<p style="padding:8px 0;">Pay when product arrives 👍</p>`;
         }
     };
@@ -1229,3 +1229,109 @@ function confirmOrder() {
     alert("Order Placed Successfully 🎉");
     closePayment();
 }
+
+
+
+
+
+
+// wishlist.push(item);
+//     localStorage.setItem("wishlist", JSON.stringify(wishlist));
+//     updateWishlist();
+// }
+
+// function updateWishlist(){
+//     document.getElementById("wishlistCount").innerText = wishlist.length;
+// }
+
+// document.getElementById("wishlistIcon").onclick = ()=>{
+//     alert("Wishlist Items: "+wishlist.length);
+// }
+
+// let dark = false;
+// document.getElementById("darkModeToggle").onclick = ()=>{
+//     dark = !dark;
+//     if(dark){
+//         document.body.classList.add("dark-mode");
+//         document.querySelector("#darkModeToggle i").classList.replace("fa-moon","fa-sun");
+//     }else{
+//         document.body.classList.remove("dark-mode");
+//         document.querySelector("#darkModeToggle i").classList.replace("fa-sun","fa-moon");
+//     }
+// };let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+// updateWishlist();
+
+// function addToWishlist(item){
+    
+
+
+
+
+
+
+
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+updateWishlist();
+
+// ADD TO WISH
+function addToWishlist(p){
+    wishlist.push(p);
+    saveWish();
+}
+
+// SAVE
+function saveWish(){
+    localStorage.setItem("wishlist",JSON.stringify(wishlist));
+    updateWishlist();
+}
+
+// UPDATE COUNT
+function updateWishlist(){
+    document.getElementById("wishlistCount").innerText = wishlist.length;
+}
+
+// OPEN PAGE
+document.getElementById("wishlistWrap").onclick = ()=>{
+    showWishlist();
+};
+
+function showWishlist(){
+    const box=document.getElementById("wishlistList");
+    box.innerHTML="";
+    wishlist.forEach((p,i)=>{
+        box.innerHTML+=`
+        <div class="wishItem">
+            <img src="${p.img}">
+            <div>
+                <h4>${p.title}</h4>
+                <p>₹${p.price}</p>
+            </div>
+            <button class="removeWishBtn" onclick="removeWishlist(${i})">Remove</button>
+        </div>`;
+    });
+    document.getElementById("wishlistPage").style.display="flex";
+}
+
+function closeWishlist(){
+    document.getElementById("wishlistPage").style.display="none";
+}
+
+function removeWishlist(i){
+    wishlist.splice(i,1);
+    saveWish();
+    showWishlist();
+}
+
+/* DARK MODE SYSTEM */
+let darkMode=false;
+document.getElementById("darkModeToggle").onclick=()=>{
+    darkMode=!darkMode;
+    if(darkMode){
+        document.body.classList.add("dark-mode");
+        document.querySelector("#darkModeToggle i").classList.replace("fa-moon","fa-sun");
+    }else{
+        document.body.classList.remove("dark-mode");
+        document.querySelector("#darkModeToggle i").classList.replace("fa-sun","fa-moon");
+    }
+};
+

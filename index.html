@@ -57,6 +57,28 @@
             🛒 <span id="cartCount">0</span>
         </div>
 
+<!-- new -->
+ <!-- DARK MODE ICON -->
+<!-- DARK MODE -->
+<div id="darkModeToggle" class="navIcon">
+   <i class="fas fa-moon"></i>
+</div>
+
+<!-- WISHLIST -->
+<div id="wishlistWrap" class="navIcon">
+   <i class="fas fa-heart"></i>
+   <span id="wishlistCount">0</span>
+   <span class="wText">Wishlist</span>
+</div>
+
+
+
+
+
+
+
+
+
         <!-- MOBILE MENU -->
         <div class="menuBtn" onclick="toggleMenu()">☰</div>
     </nav>
@@ -382,6 +404,7 @@
         <input type="text" placeholder="Order ID">
         <input type="text" placeholder="Reason">
         <button class="buyBtn">Submit Return</button>
+        
         <button onclick="closeReturn()" class="closeBtn">Close</button>
     </div>
 
@@ -436,6 +459,16 @@
     <!-- SCRIPT -->
     <script src="data.js"></script>
     <script src="script.js"></script>
+
+
+    <div id="wishlistPage" class="wishlistPage">
+    <div class="wishlistBox">
+        <h2>Wishlist</h2>
+        <span class="closeWish" onclick="closeWishlist()">✖</span>
+        <div id="wishlistList"></div>
+    </div>
+</div>
+
 
 </body>
 
