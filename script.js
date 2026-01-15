@@ -890,6 +890,7 @@ function showCategory(cat) {
 
 };
 
+// new
 
 
 
@@ -1133,15 +1134,6 @@ function unlockDashboard() {
 }
 
 
-// unlockDashboard();
-// document.getElementById("loginBtn").style.display = "none";
-// document.getElementById("welcomeUser").style.display = "none";
-
-// document.getElementById("profileBox").style.display = "flex";
-// document.getElementById("profileName").innerText = user.name;
-
-
-
 
 
 /* ============================
@@ -1235,34 +1227,13 @@ function confirmOrder() {
 
 
 
-// wishlist.push(item);
-//     localStorage.setItem("wishlist", JSON.stringify(wishlist));
-//     updateWishlist();
-// }
 
-// function updateWishlist(){
-//     document.getElementById("wishlistCount").innerText = wishlist.length;
-// }
 
-// document.getElementById("wishlistIcon").onclick = ()=>{
-//     alert("Wishlist Items: "+wishlist.length);
-// }
 
-// let dark = false;
-// document.getElementById("darkModeToggle").onclick = ()=>{
-//     dark = !dark;
-//     if(dark){
-//         document.body.classList.add("dark-mode");
-//         document.querySelector("#darkModeToggle i").classList.replace("fa-moon","fa-sun");
-//     }else{
-//         document.body.classList.remove("dark-mode");
-//         document.querySelector("#darkModeToggle i").classList.replace("fa-sun","fa-moon");
-//     }
-// };let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-// updateWishlist();
 
-// function addToWishlist(item){
-    
+
+
+
 
 
 
